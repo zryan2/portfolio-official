@@ -1,0 +1,177 @@
+.body{
+  padding: 0px;
+  margin: 0px;
+}
+
+.background{
+  background-image: url("../images/myStory.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:auto;
+  padding:0;
+  background-size: cover;
+  line-height: 450px;
+}
+
+.background h1 {
+  /*left:23.5%;*/
+  /*top: 10%;*/
+font-family: 'mellony dry brush';
+font-size: 123.66px;
+}
+
+li {
+  font-family: 'Antonio';
+  font-size: 36px;
+  display: inline-block;
+  padding-right: 200px;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav ul li a {
+  padding: 15px;
+}
+
+.fill{
+  list-style: none;
+  text-align: center;
+  padding: 20px 0 20px 0;
+  margin: auto;
+}
+
+ul{
+  overflow: hidden;
+  list-style: none;
+  height: 250px;
+  line-height: 250px;
+  transform: translate(5%,-120%);
+  z-index: 100;
+}
+
+nav.fill ul li a {
+  position: relative;
+}
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.resumePage h1 {
+  /*left:23.5%;*/
+  /*top: 10%;*/
+font-family: 'Antonio';
+font-size: 160px;
+text-transform: uppercase;
+line-height: 550px;
+t
+
+}
+
+.resumePage{
+  text-align:center;
+  margin:auto;
+  padding:0;
+}
+
+
+
+
+
+
+/* Keyframes */
+@-webkit-keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+
+
+.myInfoBox {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  line-height: 0px;
+  width: 700px;
+
+
+}
+
+#myInfo {
+  font-family: 'Aller Light';
+  text-transform: uppercase;
+  font-size: 25px;
+  color: black;
+  line-height: normal;
+
+}
+
+.portfolioPage {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+}
+.aboutPage {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  background-color: #e85741;
+}
+
+.resumePage {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: #4f85f2;
+}
