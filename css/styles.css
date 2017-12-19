@@ -27,6 +27,9 @@
   padding:0;
   background-size: cover;
   line-height: 450px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .background h1 {
@@ -145,35 +148,240 @@ nav.fill ul li a:hover:after {
   }
 }
 
-
-
 .myInfoBox {
   margin: 0px;
   padding: 0px;
   text-align: center;
   line-height: 0px;
   width: 700px;
-
-
 }
 
 
-.portfolioPage {
-    background-color: #d1edff;
-    overflow:hidden;
+/*PORTFOLIO Page*/
+#portfolioPage {    
+    background: linear-gradient(#d5d5d5,#86b4de);
     text-align:center;
     width: 100%;
-    height: 1000px;
+    height: 1500px;
+    overflow:hidden;
+    background-attachment: fixed;
+    background-size: cover;
 }
-.aboutPage {
+#portfolioTitle{
+    font-family: 'Biryani', sans-serif;
+    font-weight:normal;
+    font-size:125px;
+    font-size:8vw;
+    margin-top:150px;
+    margin-bottom:0px;
+    text-align:center;
+    letter-spacing:40px;
+    letter-spacing:3vw;
+    transform:translateX(29px);
+    color:#333a56;
+}
+#middle_portfolio{
+    height:2000px;
+    width:80vw;
+    display:inline-block;
+}
+
+/*Project Template Divs*/
+.projectDivs{
+    color:white;
+    background-color:#CAEBF2;
+    background-color:#14517c;
+    background: linear-gradient(#1a6599,#1f7cbd);
+    width: 350px;
+    height:460px;
+    vertical-align: top;
+    display: inline-block;
+    overflow:hidden;
+    margin: 80px 100px 0px 100px;
+    box-shadow: 0px 0px 10px 0px #333A56;
+}
+.projectTop{
+    width:350px;
+    height:350px;
+    max-height:350px;
+    min-height 350px;
+    overflow:hidden;
+    background-color: #3d8dce;
+}
+.slideshowArrow{
+    height:40px;
+    float:left;
+    position:absolute;
+    cursor:pointer;
+}
+.projectBottom{
+    width:350px;
+    height:50px;
+    max-height: 50px;
+    min-height:50px;
+    text-align:left;
+    margin:0px;
+}
+
+.projectTitle{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:50px;
+    margin-left: 20px;
+}
+.arrowUp{
+    height:15px;
+    cursor: pointer;
+}
+.projDescript{
+    padding:24px;
+    width:308px;
+    font-size:20px;
+    letter-spacing: 4px;
+}
+#project1Description{
+}
+.descriptionLine{
+    width:326px;
+    height:2px;
+    margin-left:12px;
+    background-color:#333a56;
+}
+
+
+.webText{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:18px;
+    margin-left: 20px;
+    cursor: pointer;
+    color: white;
+}
+.tagText{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size:14px;
+}
+/*Project 1: Remedi*/
+#proj1Left{
+    margin-left:-175px;
+    margin-top:180px;
+}
+#proj1Right{
+    margin-left:148px;
+    margin-top:180px;
+}
+#proj1Up{
+    transform: translate(150px, -5px);
+}
+#proj1Info{
+    height:60px;
+    max-height:410px;
+    min-height:60px;
+    text-align:left;
+    
+}
+#proj1TagDiv{
+    transform:translate(10px, 19px);
+}
+
+/*Project 2: Meme-age*/
+#proj2Up{
+    transform: translate(95px, -5px);
+
+}
+
+#proj2Info{
+    height:60px;
+    max-height:410px;
+    min-height:60px;
+    text-align:left;
+}
+#proj2WebDiv{
+    transform:translateY(19px);
+}
+#proj2TagDiv{
+    transform:translate(10px, 19px);
+}
+
+/*Project 3: ...*/
+
+
+/*ABOUT Page*/
+#aboutPage {
     overflow: hidden;
     text-align:center;
-    width: 100%;
-    height: 100vh;
-    background-color: #e85741;
+    height:auto;
+    width:auto; 
+    background-color: white;
+    margin-bottom: 100px;
+    
+}
+#aboutTitle{
+    font-family: 'Nixie One', cursive;
+    font-weight:normal;
+    font-size:125px;
+    font-size:8vw;
+    margin-bottom:50px;
+    text-align:center;
+    letter-spacing:40px;
+    letter-spacing:3vw;
+    transform:translateX(2vw);
+}
+#aboutHeadshot{
+    margin-left:5vw;
+    float:left;
+    width:350px;
+
+}
+#aboutImageDiv{
+    height:350px;
+    border: 6px #00ddd8 double;
+    overflow:hidden;
+}
+#headshotImage{
+    width:500px;
+    height:350px;
+    transform: translateX(-50px);
+}
+#quoteDiv{
+}
+#aboutBody{
+    margin-left: 5vw;
+    margin-right:vw;
+    width:60%;
+    float:left;
+    text-align:left;
+}
+#contactDiv{
+    width:auto;
+    margin-top:10vh;
+    margin-left:5vw;
+    float:left;
+    text-align: left;
 }
 
-.resumePage {
+.aboutFont{
+    font-family:'century gothic';
+    font-size:3.5vh;
+}
+.contactFont{
+    font-family:'century gothic';
+    font-size:3.5vh;
+    margin-left:0px;
+}
+.contactLink:hover{
+    background-color:#00ddd8;
+    color:#262c3a;
+    
+}
+.contactLogo{
+    width:4vh;
+    float:left;
+    margin-right:1vh;
+}
+
+/*ABOUT Page END*/
+
+#resumePage {  
+    
     overflow:hidden;
     text-align:center;
     margin:auto;
@@ -183,3 +391,4 @@ nav.fill ul li a:hover:after {
     position: absolute;
     background-color: #4f85f2;
 }
+
