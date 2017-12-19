@@ -8,6 +8,11 @@
   src:url("../fonts/mellony dry brush.ttf");
 }
 
+@font-face {
+  font-family: "StayRad";
+  src:url("../fonts/Stay Rad - Demo.ttf");
+}
+
 
 
 .body{
@@ -27,7 +32,12 @@
   padding:0;
   background-size: cover;
   line-height: 450px;
+<<<<<<< HEAD
+
+        /* Create the parallax scrolling effect */
+=======
     /* Create the parallax scrolling effect */
+>>>>>>> 089789713401e6ba6b80ae5df7a29427b5d93527
     background-attachment: fixed;
     background-size: cover;
 }
@@ -117,6 +127,20 @@ nav.fill ul li a:hover:after {
     font-size: 80px;
 }
 
+.resumePage{
+  background-image: url("../images/beachOne.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:auto;
+  padding:0;
+  background-size: cover;
+  animation: beachFrames 35s ease-in-out 0s infinite;
+}
+
 .resumePage h1 {
     /*left:23.5%;*/
     /*  top: 60px;*/
@@ -154,11 +178,211 @@ nav.fill ul li a:hover:after {
   text-align: center;
   line-height: 0px;
   width: 700px;
+<<<<<<< HEAD
+
+
+}
+
+@keyframes beachFrames {
+  0% {
+    background-image: url("../images/beachOne.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  7% {
+    background-image: url("../images/beachTwo.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  14% {
+    background-image: url("../images/beachOne.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  21% {
+    background-image: url("../images/beachTwo.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  28% {
+    background-image: url("../images/beachThree.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  35% {
+    background-image: url("../images/beachFour.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  42% {
+    background-image: url("../images/beachThree.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  49% {
+    background-image: url("../images/beachSix.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  56% {
+    background-image: url("../images/beachFive.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  63% {
+    background-image: url("../images/beachSix.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  70% {
+    background-image: url("../images/beachThree.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  77% {
+    background-image: url("../images/beachTwo.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  89% {
+    background-image: url("../images/beachFour.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+  100% {
+    background-image: url("../images/beachOne.jpg");
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    text-align:center;
+    margin:auto;
+    padding:0;
+    background-size: cover;
+  }
+
+
+
+}
+
+
+
+#portfolioPage {
+/*    background-color: #EFEFEF;*/
+/*    background-color:#52658F;*/
+/*    background-color:#d5d5d5;*/
+=======
 }
 
 
 /*PORTFOLIO Page*/
 #portfolioPage {    
+>>>>>>> 089789713401e6ba6b80ae5df7a29427b5d93527
     background: linear-gradient(#d5d5d5,#86b4de);
     text-align:center;
     width: 100%;
@@ -190,6 +414,11 @@ nav.fill ul li a:hover:after {
 .projectDivs{
     color:white;
     background-color:#CAEBF2;
+<<<<<<< HEAD
+/*    background-color:#1b5eb1;*/
+
+=======
+>>>>>>> 089789713401e6ba6b80ae5df7a29427b5d93527
     background-color:#14517c;
     background: linear-gradient(#1a6599,#1f7cbd);
     width: 350px;
@@ -223,6 +452,16 @@ nav.fill ul li a:hover:after {
     margin:0px;
 }
 
+<<<<<<< HEAD
+#test{
+    height:60px;
+    max-height:420px;
+    min-height:60px;
+    text-align:left;
+
+}
+=======
+>>>>>>> 089789713401e6ba6b80ae5df7a29427b5d93527
 .projectTitle{
     font-family: 'Open Sans Condensed', sans-serif;
     font-size:50px;
@@ -330,6 +569,9 @@ nav.fill ul li a:hover:after {
     float:left;
     width:350px;
 
+<<<<<<< HEAD
+#resumePage {
+=======
 }
 #aboutImageDiv{
     height:350px;
@@ -382,6 +624,7 @@ nav.fill ul li a:hover:after {
 
 #resumePage {  
     
+>>>>>>> 089789713401e6ba6b80ae5df7a29427b5d93527
     overflow:hidden;
     text-align:center;
     margin:auto;
@@ -391,4 +634,3 @@ nav.fill ul li a:hover:after {
     position: absolute;
     background-color: #4f85f2;
 }
-
