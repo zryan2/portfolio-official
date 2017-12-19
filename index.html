@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -304,3 +305,134 @@
 
 
 </html>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Ryan Zeng</title>
+  <meta name="description" content="" />
+  <meta property="og:image" content="" />
+
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/styles.css">
+ <link href='https://fonts.googleapis.com/css?family=Biryani|Lato|Nunito|Open+Sans|Open+Sans+Condensed:300|Titillium+Web|Ubuntu|Vollkorn+SC' rel="stylesheet">
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js">
+  </script>
+
+
+</head>
+  <body style = "margin: 0;">
+    <div class="background">
+      <h1 id = "ryanZeng" class = "animated swing"><a href ="#" class='button'>Ryan Zeng</a></h1>
+      <nav class = "fill">
+        <ul>
+          <li><a href="#portfolioPage">Portfolio</a></li>
+          <li><a href="#aboutPage">About</a></li>
+          <li><a href="#resumePage">Resume</a></li>
+        </ul>
+      </nav>
+      <div class="myInfoBox">
+          <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
+      </div>
+    </div>
+
+
+  </body>
+  <div id="portfolioPage">
+      <div id="middle_portfolio">
+        <h3 id='portfolioTitle'>PORTFOLIO</h3>
+        <div class='projectDivs' id='project_1'>
+            <div class="projectTop" id="remediTop">
+                <img src="images/remedi_logo.png" style="width:350px;">
+            </div>
+            <div id='test'>
+                <p1 class="projectTitle">REMEDI</p1>
+                <img src="images/arrow-up-on.png" class="arrowUp" id="remediUp">
+            </div>
+            <script>
+                var proj1TextPresent = false;
+                $("#test").mouseenter(function(){
+                    if(!proj1TextPresent){
+
+                    $("#remediTop").slideToggle(311.5);
+                    $("#remediUp").attr("src","images/arrow-down-on.png");
+                       $("#test").animate({
+                           height: "+=350"
+                       }, 310);
+                        if($("#project1Description").length < 1){
+                        $("#test").append("<div class='projDescript' id='project1Description'> These words are just a test to test the description line and stuff</div>");
+                        proj1TextPresent = true;
+                        }
+                    }
+                    
+                }).mouseleave(function(){
+                    $("#remediTop").slideToggle(310);
+                    $("#test").animate({
+                       height: "-=350"
+                    }, 310);
+                    $("#remediUp").attr("src","images/arrow-up-on.png");
+                    if(proj1TextPresent){
+                        $("#project1Description").fadeOut(250, function(){
+                            $(this).remove();
+                        });
+                        
+                        proj1TextPresent = false;
+                    }
+
+                });      
+
+//
+//                 $("#remediUp").mouseover(function(){
+//                    $(this).fadeOut(250, function(){
+//                        $(this).attr('src', '../images/arrow-down-on.png');
+//                        $(this).fadeIn(100);
+//                    });
+//                });                   
+                
+            </script>
+            
+            <div class="projectBottom">
+                
+                <div class='descriptionLine'></div>
+                <div id='remediWebDiv'>
+                    <a class='webText'>https://www.website.com</a>
+                </div>
+                <div id="remediTagDiv">
+                    <p1 class=tagText>Java | Android</p1>
+                </div>
+                <img src="images/github-logo.png" style="height:30px;transform:translate(310px, -30px);">
+
+            </div>
+        </div>
+        <div class='projectDivs'>
+            <div class="projectTop">
+            </div>
+            <div class="projectBottom">
+            </div>
+        </div>
+      </div>
+  </div>
+
+  <div id="aboutPage">
+      <h1>ABOUT</h1>
+  </div>
+
+  <div id="resumePage">
+      <h1 id = "resume" class = ""><a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a></h1>
+  </div>
+
+<script>
+        $('a.button').click( function(){
+          // $('input[name=firstName]').addClass('animated rubberBand');
+          $("#ryanZeng").removeClass('swing').addClass('rubberBand')
+        });
+</script>
+
+
+</html>
+>>>>>>> master
