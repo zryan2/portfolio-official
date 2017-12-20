@@ -48,7 +48,7 @@
   <div id="portfolioPage">
       <div id="middle_portfolio">
         <h3 id='portfolioTitle'>PORTFOLIO</h3>
-        
+
 <!-- PROJECT 1 (Begin) -->
             <div class='projectDivs' id='project_1'>
                 <!--Slideshow Optional-->
@@ -67,26 +67,26 @@
                         },function(){
                         $(this).attr('src','images/arrow-left-off.png');
                         });
-                        
+
                         $('#proj1Right').hover(function(){
                         $(this).attr('src','images/arrow-right-on.png');
                         },function(){
                         $(this).attr('src','images/arrow-right-off.png');
                         });
-                        
+
 
                         $('#proj1Right').click(function(){
                             nextImage();
                         });
-                        
+
                         $('#proj1Left').click(function(){
                             prevImage();
                         });
-                        
+
                         var fileDirectory='images/remedi-';
                         var slideIndex=1;
                         var maxImages =  $('#proj1Slideshow img').length;
-                        
+
                         function nextImage(){
                             if(slideIndex == maxImages){
                                 slideIndex = 1;
@@ -101,7 +101,7 @@
                             }else{
                                 slideIndex-=1;
                             }
-                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");                            
+                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");
                         }
                     </script>
                 </div>
@@ -209,16 +209,16 @@
                 </div>
           </div>
 <!-- PROJECT 2 (End) -->
-          
+
 <!-- PROJECT 3 (Begin) -->
-          
-          
+
+
 <!-- PROJECT 3 (End) -->
-          
-      </div>          
+
+      </div>
   </div>
 <!--Project End-->
-    
+
 <!--About Page-->
   <div id="aboutPage">
       <h1 id='aboutTitle'>ABOUT</h1>
@@ -230,10 +230,10 @@
         <div id='quoteDiv'>
             <p1 class='aboutFont' style='font-size:20px;'>"The best preparation for tomorrow is doing your best today."</p1>
             <br>
-            <p1 class='aboutFont' style='font-size:20px;'>-H. Jackson Brown, Jr.</p1> 
+            <p1 class='aboutFont' style='font-size:20px;'>-H. Jackson Brown, Jr.</p1>
         </div>
       </div>
-      
+
       <script>
         $('#headshotImage').hover(function(){
             $(this).attr('src','images/groot_funny.jpg');
@@ -241,7 +241,7 @@
             $(this).attr('src','images/groot_serious.jpg');
         });
       </script>
-      
+
       <div id="aboutBody">
           <p1 class='aboutFont' style="color:#00ddd8; font-size:70px">Hello!</p1>
           <br>
