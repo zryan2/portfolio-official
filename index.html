@@ -22,226 +22,87 @@
 
 
 </head>
-  <body style = "margin: 0;">
-    <div class="containerText">
-        <h1 id= "myTypingText"></h1>
-      </div>
+<body style = "margin: 0;">
+
     <div class="background">
-      <h1 id = "ryanZeng" class = "animated swing"><a href ="#" class='button'>Ryan Zeng</a></h1>
-      <nav class = "fill">
-        <ul>
-          <li><a href="#portfolioPage">Portfolio</a></li>
-          <li><a href="#aboutPage">About</a></li>
-          <li><a href="#resumePage">Resume</a></li>
-        </ul>
-      </nav>
-      <div class="myInfoBox">
-          <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
+        
+        <div id='landingPage'>
+            <div style='width:250px;margin-left:41vw;margin-top:50px;'>
+                <hr class='landingLine hr-left'>
+                <hr class='landingLine hr-right'>
+            </div>
+            <div class="containerText">
+                <h1 id= "myTypingText"></h1>
+            </div>
+
+            <h1 id = "ryanZeng">
+            <a id='landingName' href ="#" class='button'>Ryan Zeng</a>
+            </h1>
+            <nav class = "fill">
+              <ul>
+                <li id='portfolioOption'><a href="#portfolioPage">Portfolio</a></li>
+                <li id='aboutOption'><a href="#aboutPage">About</a></li>
+                <li id='resumeOption'><a href="#resumePage">Resume</a></li>
+              </ul>
+            </nav>
+            <div class="myInfoBox">
+              <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
+            </div>
+         <script>
+                $('a').click(function(){
+                    $('html, body').animate({
+                        scrollTop: $( $(this).attr('href') ).offset().top
+                    }, 500);
+                    return false;
+                });
+                /* TEXT ANIMATION */
+                var myString = "<let's            go     around            the          world/>";
+                var myArray = myString.split("");
+                var loopTimer;
+                function frameLooper() {
+                    if(myArray.length > 0) {
+                        document.getElementById("myTypingText").innerHTML += myArray.shift();
+                    } else {
+                        clearTimeout(loopTimer);
+                                return false;
+                    }
+                    loopTimer = setTimeout('frameLooper()',70);
+                }
+                $(document).ready(function(){
+                    frameLooper();
+
+                    $('#landingPage').hide();
+                    $('#ryanZeng').hide();
+                    $('#portfolioOption').hide();
+                    $('#aboutOption').hide();
+                    $('#resumeOption').hide();
+                    $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+                        $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
+                            $('#portfolioOption').addClass('animated bounceInLeft').fadeIn('fast').delay(1).queue(function(){
+                                $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(50).queue(function(){
+                                    $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+                                        setTimeout(function(){
+                                                $('.landingLine').addClass('grow');
+                                        }, 100);
+                                    });                            
+                                });
+                            });
+                            
+                        });
+
+                    });
+
+                });
+               
+          </script>
+        </div>
       </div>
-    </div>
-      <script>
-            $('a').click(function(){
-                $('html, body').animate({
-                    scrollTop: $( $(this).attr('href') ).offset().top
-                }, 500);
-                return false;
-            });
-      </script>
+     
   </body>
 <!--Portfolio Page-->
   <div id="portfolioPage">
       <div id="middle_portfolio">
         <h3 id='portfolioTitle'>PORTFOLIO</h3>
-
-<!-- PROJECT 1 (Begin) -->
-            <div class='projectDivs' id='project_1'>
-                <!--Slideshow Optional-->
-                <div class="projectTop" id="proj1Top">
-                    <img class='slideshowArrow' id='proj1Left' src='images/arrow-left-off.png'>
-                    <img class='slideshowArrow' id='proj1Right' src='images/arrow-right-off.png'>
-                    <div id=proj1Slideshow>
-                        <img class='proj1Slides' id='proj1slideDisplay' src="images/remedi-1.png" style="width:250px;">
-                        <img>
-                        <img>
-                    </div>
-                    <script>
-
-/* TEXT ANIMATION */
-var myString = "<let's            go     around            the          world/>";
-var myArray = myString.split("");
-var loopTimer;
-function frameLooper() {
-	if(myArray.length > 0) {
-		document.getElementById("myTypingText").innerHTML += myArray.shift();
-	} else {
-		clearTimeout(loopTimer);
-                return false;
-	}
-	loopTimer = setTimeout('frameLooper()',70);
-}
-frameLooper();
-/*Other */
-
-                        $('#proj1Left').fadeOut('1');
-                        $('#proj1Right').fadeOut('1');
-                        $("#proj1Top").hover(function(){
-                           $('#proj1Left').fadeIn('fast');
-                           $('#proj1Right').fadeIn('fast');
-                        }, function(){
-                           $('#proj1Left').fadeOut('fast');
-                           $('#proj1Right').fadeOut('fast');
-
-                        });
-                        $('#proj1Left').hover(function(){
-                            $(this).attr('src','images/arrow-left-on.png');
-                            },function(){
-                            $(this).attr('src','images/arrow-left-off.png');
-                        });
-
-                        $('#proj1Right').hover(function(){
-                            $(this).attr('src','images/arrow-right-on.png');
-                            },function(){
-                            $(this).attr('src','images/arrow-right-off.png');
-                        });
-
-
-                        $('#proj1Right').click(function(){
-                            nextImage();
-                        });
-
-                        $('#proj1Left').click(function(){
-                            prevImage();
-                        });
-
-                        var fileDirectory='images/remedi-';
-                        var slideIndex=1;
-                        var maxImages =  $('#proj1Slideshow img').length;
-
-                        function nextImage(){
-                            if(slideIndex == maxImages){
-                                slideIndex = 1;
-                            }else{
-                                slideIndex+=1;
-                            }
-                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");
-                        }
-                        function prevImage(){
-                           if(slideIndex == 1){
-                                slideIndex = maxImages;
-                            }else{
-                                slideIndex-=1;
-                            }
-                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");
-                        }
-                    </script>
-                </div>
-                <!--End slideshow-->
-                <div id='proj1Info'>
-                    <p1 id='proj1Title' class="projectTitle">REMEDI</p1>
-                    <img src="images/arrow-up-on.png" class="arrowUp" id="proj1Up">
-                </div>
-                <script>
-                    $("#proj1Info").hoverIntent(function(){
-                        $("#proj1Top").slideUp(311.5);
-                        $("#proj1Up").attr("src","images/arrow-down-on.png");
-                        $("#proj1Info").animate({
-                           height: "+=350"
-                        }, 310);
-                        if($("#project1Description").length < 1){
-                            $("#proj1Info").append("<div class='projDescript' id='project1Description'> These words are just a test to test the description line and stuff</div>");
-                        }
-                        $("#proj1Left").fadeOut(50);
-                        $("#proj1Right").fadeOut(50);
-                    },function(){
-                        $("#proj1Top").slideDown(310);
-                        $("#proj1Info").animate({
-                           height: "-=350"
-                        }, 310);
-                        $("#proj1Up").attr("src","images/arrow-up-on.png");
-                        if($("#project1Description").length == 1){
-                            $("#project1Description").fadeOut(250, function(){
-                                $(this).remove();
-                            });
-                        }
-                    });
-
-                </script>
-
-                <div class="projectBottom">
-
-                    <div class='descriptionLine'></div>
-                    <div id="proj1TagDiv">
-                        <p1 class=tagText>Java | Android | Hackathon</p1>
-                    </div>
-                    <div class='logoContainer' style="transform:translate(275px, -8px);">
-                        <a href='https://github.com/zryan2/Remedi2'>
-                            <img src="images/github-logo.png" style="height:30px;">
-                        </a>
-                        <a href='https://devpost.com/software/remedi-q82k7u'>
-                            <img src="images/devpost-logo.svg" style='height:30px'>
-                        </a>
-                    </div>
-                </div>
-            </div>
-<!-- PROJECT 1 (End)-->
-<!-- PROJECT 2 (Begin)-->
-            <div class='projectDivs' id='project_2'>
-                <div class="projectTop" id="proj2Top">
-                    <img src="images/meme-age_logo.png" style="width:350px;">
-                </div>
-                <div id='proj2Info'>
-                    <p1 class="projectTitle">MEME-AGE</p1>
-                    <img src="images/arrow-up-on.png" class="arrowUp" id="proj2Up">
-                </div>
-                <script>
-                    $("#proj2Info").hoverIntent(function(){
-                        $("#proj2Top").slideUp(311.5);
-                        $("#proj2Up").attr("src","images/arrow-down-on.png");
-                           $("#proj2Info").animate({
-                               height: "+=350"
-                           }, 310);
-                            if($("#project2Description").length < 1){
-                                $("#proj2Info").append("<div class='projDescript' id='project2Description'> These words are just a test to test the description line and stuff</div>");
-                            }
-                    },function(){
-                        $("#proj2Top").slideDown(310);
-                        $("#proj2Info").animate({
-                           height: "-=350"
-                        }, 310);
-                        $("#proj2Up").attr("src","images/arrow-up-on.png");
-                        if($("#project2Description").length == 1){
-                            $("#project2Description").fadeOut(250, function(){
-                                $(this).remove();
-                            });
-                        }
-
-                    });
-
-                </script>
-
-                <div class="projectBottom">
-
-                    <div class='descriptionLine'></div>
-                    <div id="proj2TagDiv">
-                        <p1 class=tagText>JavaScript | Chrome | HTML/CSS | Hackathon</p1>
-                    </div>
-                    <div class='logoContainer' style="transform:translate(275px, -8px);">
-                        <a href='https://github.com/zryan2/VandyHacks2017'>
-                            <img src="images/github-logo.png" style="height:30px" >
-                        </a>
-                        <a href='https://devpost.com/software/meme-age'>
-                            <img src="images/devpost-logo.svg" style='height:30px'>
-                        </a>
-
-                    </div>
-                </div>
-          </div>
-<!-- PROJECT 2 (End) -->
-
-<!-- PROJECT 3 (Begin) -->
-
-
-<!-- PROJECT 3 (End) -->
 
       </div>
   </div>
@@ -250,101 +111,7 @@ frameLooper();
 <!--About Page-->
   <div id="aboutPage">
       <h1 id='aboutTitle'>ABOUT</h1>
-      <!--Div to hold headshot & Quote-->
-      <div id='aboutHeadshot'>
-        <div id='aboutImageDiv'>
-            <img src="images/groot_serious.jpg" id="headshotImage">
-        </div>
-        <div id='quoteDiv'>
-            <p1 class='aboutFont' style='font-size:20px;'>"The best preparation for tomorrow is doing your best today."</p1>
-            <br>
-            <p1 class='aboutFont' style='font-size:20px;'>-H. Jackson Brown, Jr.</p1>
-        </div>
-      </div>
-
-      <script>
-        $('#headshotImage').hover(function(){
-            $(this).attr('src','images/groot_funny.jpg');
-        },function(){
-            $(this).attr('src','images/groot_serious.jpg');
-        });
-      </script>
-
-      <div id="aboutBody">
-          <p1 class='aboutFont' style="color:#00ddd8; font-size:70px">Hello!</p1>
-          <br>
-          <p1 class='aboutFont' style="font-size:70px">My name is </p1>
-          <p1 class='aboutFont' style='font-size:70px; color:#517398'>Ryan Zeng</p1>
-          <p1 class='aboutFont' style='font-size:70px;' >.</p1>
-          <br>
-          <p1 class='aboutFont'>I am a 3rd year undergraduate at the</p1>
-          <p1 class='aboutFont' style='color:orange'>University of Florida</p1>
-          <p1 class='aboutFont'>.</p1>
-          <br>
-          <p1 class='aboutFont'>I am pursuing a </p1>
-          <p1 class='aboutFont' style='color:#517398'>B.S. in Computer Science</p1>
-          <p1 class='aboutFont'> and a minor in</p1>
-          <p1 class='aboutFont' style='color:#517398'> Digital Arts and Sciences</p1>
-          <p1 class='aboutFont'>.</p1>
-          <br>
-          <br>
-          <br>
-          <br>
-          <p1 class='aboutFont'>I enjoy building mobile applications for android platform. My technical expertise includes various programming languages (Java, C++, Python) and libraries.</p1>
-          <br>
-          <br>
-          <p1 class='aboutFont'>In my freetime I like weightlifting, videogames, boardgames, and challenging myself with puzzles.</p1>
-<!--
-          <br>
-          <br>
-          <p1 class='aboutFont'>Previously I have interned at:</p1>
-          <br>
-          <p1 class='aboutFont'>Microsoft</p1>
-          <br>
-          <p1 class='aboutFont'>Google</p1>
-          <br>
--->
-
-
-      </div>
-      <div id='contactDiv'>
-          <p1 class='contactFont'>I can be contacted through:</p1>
-          <br>
-          <a href='mailto:zeng.ryan2@gmail.com'>
-              <div class='contactDiv'>
-
-                  <img src="images/email_logo.png" class='contactLogo' style='transform:translateY(1vh);'>
-<!--                  <img src="images/email_icon_2.jpg" class='contactLogo' style='transform:translateY(1vh);'>-->
-                  <span class='contactTooltip'>Email</span>
-
-              </div>
-          </a>
-          <a href='https://www.linkedin.com/in/zengryan8'>
-              <div class='contactDiv'>
-
-              <img src="images/linkedin_logo.png" class='contactLogo'>
-              <span class='contactTooltip'>Linkedin</span>
-              </div>
-          </a>
-          <a href='https://www.facebook.com/ryan.zeng.7'>
-              <div class='contactDiv'>
-                  <img src="images/fb_logo.png" class='contactLogo'>
-                  <span class='contactTooltip'>Facebook</span>
-              </div>
-          </a>
-
-<!--
-
-          <img src="images/email_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='mailto:zeng.ryan2@gmail.com'>Email</a>
-          <br>
-          <img src="images/linkedin_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='https://www.linkedin.com/in/zengryan8'>LinkedIn</a>
-          <br>
-          <img src="images/fb_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='https://www.facebook.com/ryan.zeng.7'>Facebook</a>
--->
-      </div>
+      
   </div>
 <!--About End-->
   <div id="resumePage">
