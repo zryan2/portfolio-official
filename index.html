@@ -61,17 +61,26 @@
                         <img>
                     </div>
                     <script>
-
-                        $('#proj1Left').hover(function(){
-                        $(this).attr('src','images/arrow-left-on.png');
-                        },function(){
-                        $(this).attr('src','images/arrow-left-off.png');
+                        $('#proj1Left').fadeOut('1'); 
+                        $('#proj1Right').fadeOut('1');                        
+                        $("#proj1Top").hover(function(){
+                           $('#proj1Left').fadeIn('fast'); 
+                           $('#proj1Right').fadeIn('fast'); 
+                        }, function(){
+                           $('#proj1Left').fadeOut('fast'); 
+                           $('#proj1Right').fadeOut('fast'); 
+                            
                         });
-
+                        $('#proj1Left').hover(function(){
+                            $(this).attr('src','images/arrow-left-on.png');
+                            },function(){
+                            $(this).attr('src','images/arrow-left-off.png');
+                        });
+                        
                         $('#proj1Right').hover(function(){
-                        $(this).attr('src','images/arrow-right-on.png');
-                        },function(){
-                        $(this).attr('src','images/arrow-right-off.png');
+                            $(this).attr('src','images/arrow-right-on.png');
+                            },function(){
+                            $(this).attr('src','images/arrow-right-off.png');
                         });
 
 
@@ -133,8 +142,6 @@
                                 $(this).remove();
                             });
                         }
-                        $("#proj1Left").fadeIn(600);
-                        $("#proj1Right").fadeIn(600);
                     });
 
                 </script>
@@ -245,13 +252,15 @@
       <div id="aboutBody">
           <p1 class='aboutFont' style="color:#00ddd8; font-size:70px">Hello!</p1>
           <br>
-          <p1 class='aboutFont'>My name is </p1>
-          <p1 class='aboutFont' style='color:#517398'>Ryan</p1>
-          <p1 class='aboutFont'>!</p1>
+          <p1 class='aboutFont' style="font-size:70px">My name is </p1>
+          <p1 class='aboutFont' style='font-size:70px; color:#517398'>Ryan Zeng</p1>
+          <p1 class='aboutFont' style='font-size:70px;' >.</p1>
           <br>
           <p1 class='aboutFont'>I am a 3rd year undergraduate at the</p1>
           <p1 class='aboutFont' style='color:orange'>University of Florida</p1>
-          <p1 class='aboutFont'>. I am pursuing a </p1>
+          <p1 class='aboutFont'>.</p1>
+          <br>
+          <p1 class='aboutFont'>I am pursuing a </p1>
           <p1 class='aboutFont' style='color:#517398'>B.S. in Computer Science</p1>
           <p1 class='aboutFont'> and a minor in</p1>
           <p1 class='aboutFont' style='color:#517398'> Digital Arts and Sciences</p1>
@@ -275,10 +284,36 @@
           <br>
 -->
 
+
       </div>
       <div id='contactDiv'>
           <p1 class='contactFont'>I can be contacted through:</p1>
           <br>
+          <a href='mailto:zeng.ryan2@gmail.com'>
+              <div class='contactDiv'>
+
+                  <img src="images/email_logo.png" class='contactLogo' style='transform:translateY(1vh);'>
+<!--                  <img src="images/email_icon_2.jpg" class='contactLogo' style='transform:translateY(1vh);'>-->
+                  <span class='contactTooltip'>Email</span>
+
+              </div>
+          </a>
+          <a href='https://www.linkedin.com/in/zengryan8'>
+              <div class='contactDiv'>
+
+              <img src="images/linkedin_logo.png" class='contactLogo'>
+              <span class='contactTooltip'>Linkedin</span>
+              </div>
+          </a>
+          <a href='https://www.facebook.com/ryan.zeng.7'>
+              <div class='contactDiv'>
+                  <img src="images/fb_logo.png" class='contactLogo'>
+                  <span class='contactTooltip'>Facebook</span>
+              </div>
+          </a>
+         
+<!--
+
           <img src="images/email_logo.png" class='contactLogo'>
           <a class='contactFont contactLink' href='mailto:zeng.ryan2@gmail.com'>Email</a>
           <br>
@@ -287,6 +322,7 @@
           <br>
           <img src="images/fb_logo.png" class='contactLogo'>
           <a class='contactFont contactLink' href='https://www.facebook.com/ryan.zeng.7'>Facebook</a>
+-->
       </div>
   </div>
 <!--About End-->
