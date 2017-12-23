@@ -27,17 +27,18 @@
     <div class="background">
         
         <div id='landingPage'>
-            <div style='width:250px;margin-left:41vw;margin-top:50px;'>
+            <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
                 <hr class='landingLine hr-left'>
+                <img id='landingEarth' src='images/earth-temp.png'>
                 <hr class='landingLine hr-right'>
             </div>
             <div class="containerText">
                 <h1 id= "myTypingText"></h1>
             </div>
-
             <h1 id = "ryanZeng">
-            <a id='landingName' href ="#" class='button'>Ryan Zeng</a>
+                <a id='landingName' href ="#" class='button'>Ryan Zeng</a>
             </h1>
+
             <nav class = "fill">
               <ul>
                 <li id='portfolioOption'><a href="#portfolioPage">Portfolio</a></li>
@@ -76,13 +77,16 @@
                     $('#portfolioOption').hide();
                     $('#aboutOption').hide();
                     $('#resumeOption').hide();
+                    $('#landingEarth').hide();
                     $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
                         $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
                             $('#portfolioOption').addClass('animated bounceInLeft').fadeIn('fast').delay(1).queue(function(){
                                 $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(50).queue(function(){
                                     $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
                                         setTimeout(function(){
-                                                $('.landingLine').addClass('grow');
+                                                $('.landingLine').addClass('grow').delay(1000).queue(function(){
+                                                    $('#landingEarth').addClass('animated bounceIn').fadeIn('fast');
+                                                });
                                         }, 100);
                                     });                            
                                 });
