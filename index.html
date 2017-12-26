@@ -27,11 +27,13 @@
     <div class="background">
         
         <div id='landingPage'>
+<!--
             <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
                 <hr class='landingLine hr-left'>
                 <img id='landingEarth' src='images/earth-temp.png'>
                 <hr class='landingLine hr-right'>
             </div>
+-->
             <div class="containerText">
                 <h1 id= "myTypingText"></h1>
             </div>
@@ -80,7 +82,7 @@
                     $('#landingEarth').hide();
                     $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
                         $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
-                            $('#portfolioOption').addClass('animated bounceInLeft').fadeIn('fast').delay(1).queue(function(){
+                            $('#portfolioOption').addClass('animated bounceInLeft').fadeIn('fast').delay(50).queue(function(){
                                 $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(50).queue(function(){
                                     $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
                                         setTimeout(function(){
