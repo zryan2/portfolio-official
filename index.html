@@ -27,25 +27,27 @@
 <body style = "margin: 0;">
 
     <div class="background">
-        
+
         <div id='landingPage'>
-            <div id='linePath'>
-                <svg  id="landingLine" height="100vh" width="98vw">
-                    <!--MX Y C x1 y1, x2 y2, x y-->
-                    <path fill="none" stroke-width="6" stroke="#fff" 
-                          d="M 1065 260 
-                             C 1300 100, 1400 300, 1250 350  
-                             C 1000 420, 1150 50, 1300 400 
-                             C 1380 600, 1200 550, 1100 525 
-                             C 900 460, 900 300, 600 450
-                             C 350 600, 250 700, 300 1000" />
-                </svg>
-                <script>
-                    var landingSVG = $('#landingLine').drawsvg({
-                       duration: 5000
-                    });
-                </script>
-            </div>
+    <!--SVG Line Start-->
+    <div id='linePath'>
+        <svg  id="landingLine" height="inherit" width="98vw">
+            <!--MX Y C x1 y1, x2 y2, x y-->
+            <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round" 
+                  d="M 1065 260 
+                     C 1300 100, 1400 300, 1250 350  
+                     C 1000 420, 1150 50, 1300 400 
+                     C 1380 600, 1200 550, 1100 525 
+                     C 900 460, 900 300, 600 450
+                     C 350 600, 250 700, 300 1000" />
+        </svg>
+        <script>
+            var landingSVG = $('#landingLine').drawsvg({
+               duration: 5000
+            });
+        </script>
+    </div>
+    <!--SVG Line End--> 
 <!--
             <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
                 <hr class='landingLine hr-left'>
@@ -116,7 +118,7 @@
                         });
 
                     });
-                    $('#ryanZeng').one("click", function(){
+                    $('#ryanZeng').click(function(){
                         landingSVG.drawsvg('animate').delay(3500).queue(function(){
                                 $('html, body').animate({
                                     scrollTop: $("#portfolioPage").offset().top
@@ -125,38 +127,48 @@
                         });
 
                     });
+//                  Scrolling function
+                    var $doc = $(document),
+                        $win = $(window),
+                        $svg = $('#landingLine').drawsvg(),
+                        max = 800;
+
+                    $win.on('scroll', function() {
+                      var p = $win.scrollTop() / max;
+                      $svg.drawsvg('progress', p);
+                    });
                 });
                
           </script>
         </div>
       </div>
 
-  </body>
-<!--Portfolio Page-->
-  <div id="portfolioPage">
-      <div id="middle_portfolio">
-        <h3 id='portfolioTitle'>PORTFOLIO</h3>
+    <!--Portfolio Page-->
+      <div id="portfolioPage">
+          <div id="middle_portfolio">
+            <h3 id='portfolioTitle'>PORTFOLIO</h3>
+
+          </div>
+      </div>
+    <!--Project End-->
+
+    <!--About Page-->
+      <div id="aboutPage">
+          <h1 id='aboutTitle'>ABOUT</h1>
 
       </div>
-  </div>
-<!--Project End-->
+    <!--About End-->
+      <div id="resumePage">
+          <h1 id = "resume" class = ""><a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a></h1>
+      </div>
 
-<!--About Page-->
-  <div id="aboutPage">
-      <h1 id='aboutTitle'>ABOUT</h1>
-      
-  </div>
-<!--About End-->
-  <div id="resumePage">
-      <h1 id = "resume" class = ""><a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a></h1>
-  </div>
+    <script>
+            $('a.button').click( function(){
+              // $('input[name=firstName]').addClass('animated rubberBand');
+              $("#ryanZeng").removeClass('swing').addClass('rubberBand')
+            });
+    </script>
 
-<script>
-        $('a.button').click( function(){
-          // $('input[name=firstName]').addClass('animated rubberBand');
-          $("#ryanZeng").removeClass('swing').addClass('rubberBand')
-        });
-</script>
-
+</body>
 
 </html>

@@ -24,6 +24,11 @@
 #linePath{
     margin:0 auto;
     position:absolute;
+    height:2000px;
+    
+}
+#landingLine{
+    z-index:101;
 }
 
 
@@ -47,6 +52,7 @@
 .containerText {
     margin:0 auto;
     margin-top:80px;
+
 }
 
 .containerText h1{
@@ -57,12 +63,13 @@
     font-family: 'Open Sans Condensed', sans-serif;
     height:40px;
 }
+/*
 .landingLine{
     width:0px;
     height:4px;
     background-color:black;
     border-width:0px;
-    -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+    -webkit-transition: width 1s ease-out;  For Safari 3.1 to 6.0 
     transition: width 1s  ease-out;
 }
 .hr-left{
@@ -80,15 +87,19 @@
     float:left;
     margin-left:10.5px;
 }
+*/
 
 #ryanZeng{
     height:400px;
+    z-index:200;
 }
 #landingName {
   /*left:23.5%;*/
   /*top: 10%;*/
     font-family: 'Mellony';
     font-size: 123.66px;
+    z-index:200;
+
 }
 
 #landingPage{
@@ -114,6 +125,7 @@ li {
     padding-right: 200px;
     text-transform: uppercase;
     margin-top:50px;
+    z-index:100;
 }
 
 a {
@@ -123,6 +135,8 @@ a {
 
 nav ul li a {
   padding: 15px;
+  z-index:100;
+
 }
 
 .fill{
@@ -130,19 +144,23 @@ nav ul li a {
   text-align: center;
   padding: 20px 0 20px 0;
   margin: auto;
+  z-index:100;
+
 }
 
 ul{
   overflow: hidden;
   list-style: none;
-  height: 250px;
-  line-height: 250px;
-  transform: translate(5%,-120%);
-  z-index: 100;
+  height: 110px;
+  line-height: 0px;
+  transform: translate(5%,-180%);
+  z-index:100;
 }
 
 nav.fill ul li a {
   position: relative;
+  z-index:100;
+
 }
 nav.fill ul li a:after {
   position: absolute;
@@ -155,11 +173,15 @@ nav.fill ul li a:after {
   color: transparent;
   background: #aaa;
   height: 1px;
+  z-index:100;
+
 }
 
 
 nav.fill ul li a {
   transition: all 2s;
+  z-index:100;
+
 }
 
 nav.fill ul li a:after {
@@ -167,10 +189,12 @@ nav.fill ul li a:after {
   content: '.';
   margin: 0;
   opacity: 0;
+  z-index:100;
+
 }
 nav.fill ul li a:hover {
   color: #fff;
-  z-index: 1;
+  z-index: 101;
 }
 nav.fill ul li a:hover:after {
   z-index: -10;
@@ -217,6 +241,7 @@ nav.fill ul li a:hover:after {
     overflow:hidden;
     background-attachment: fixed;
     background-size: cover;
+    z-index:100;
 }
 #portfolioTitle{
     font-family: 'Biryani', sans-serif;
