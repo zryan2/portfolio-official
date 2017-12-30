@@ -33,11 +33,11 @@
     <div id='linePath'>
         <svg  id="landingLine" height="inherit" width="98vw">
             <!--MX Y C x1 y1, x2 y2, x y-->
-            <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round" 
-                  d="M 1065 260 
-                     C 1300 100, 1400 300, 1250 350  
-                     C 1000 420, 1150 50, 1300 400 
-                     C 1380 600, 1200 550, 1100 525 
+            <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round"
+                  d="M 1065 260
+                     C 1300 100, 1400 300, 1250 350
+                     C 1000 420, 1150 50, 1300 400
+                     C 1380 600, 1200 550, 1100 525
                      C 900 460, 900 300, 600 450
                      C 350 600, 250 700, 300 1000" />
         </svg>
@@ -47,7 +47,7 @@
             });
         </script>
     </div>
-    <!--SVG Line End--> 
+    <!--SVG Line End-->
 <!--
             <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
                 <hr class='landingLine hr-left'>
@@ -72,82 +72,15 @@
             <div class="myInfoBox">
               <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
             </div>
-         <script>
-                $('a').click(function(){
-                    $('html, body').animate({
-                        scrollTop: $( $(this).attr('href') ).offset().top
-                    }, 500);
-                    return false;
-                });
-                /* TEXT ANIMATION */
-                var myString = "<let's            go     around            the          world/>";
-                var myArray = myString.split("");
-                var loopTimer;
-                function frameLooper() {
-                    if(myArray.length > 0) {
-                        document.getElementById("myTypingText").innerHTML += myArray.shift();
-                    } else {
-                        clearTimeout(loopTimer);
-                                return false;
-                    }
-                    loopTimer = setTimeout('frameLooper()',70);
-                }
-                $(document).ready(function(){
-                    frameLooper();
-
-                    $('#landingPage').hide();
-                    $('#ryanZeng').hide();
-                    $('#portfolioOption').hide();
-                    $('#aboutOption').hide();
-                    $('#resumeOption').hide();
-                    $('#landingEarth').hide();
-                    $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
-                        $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
-                            $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
-                                $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
-                                    $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
-                                        setTimeout(function(){
-                                                $('.landingLine').addClass('grow').delay(1000).queue(function(){
-                                                    $('#landingEarth').addClass('animated bounceIn').fadeIn('fast');
-                                                });
-                                        }, 100);
-                                    });                            
-                                });
-                            });
-                            
-                        });
-
-                    });
-                    $('#ryanZeng').click(function(){
-                        landingSVG.drawsvg('animate').delay(3500).queue(function(){
-                                $('html, body').animate({
-                                    scrollTop: $("#portfolioPage").offset().top
-                                }, 500);
-
-                        });
-
-                    });
-//                  Scrolling function
-                    var $doc = $(document),
-                        $win = $(window),
-                        $svg = $('#landingLine').drawsvg(),
-                        max = 800;
-
-                    $win.on('scroll', function() {
-                      var p = $win.scrollTop() / max;
-                      $svg.drawsvg('progress', p);
-                    });
-                });
-               
-          </script>
         </div>
       </div>
 
     <!--Portfolio Page-->
-      <div id="portfolioPage">
-          <div id="middle_portfolio">
-            <h3 id='portfolioTitle'>PORTFOLIO</h3>
-
+      <div id='portfolioPage'>
+          <div class="pBackground">
+            <h1 id = "portfolio">
+                <a id='portfolioName' href ="#" class='button'>Portfolio</a>
+            </h1>
           </div>
       </div>
     <!--Project End-->
@@ -167,6 +100,73 @@
               // $('input[name=firstName]').addClass('animated rubberBand');
               $("#ryanZeng").removeClass('swing').addClass('rubberBand')
             });
+
+            $('a').click(function(){
+                $('html, body').animate({
+                    scrollTop: $( $(this).attr('href') ).offset().top
+                }, 500);
+                return false;
+            });
+            /* TEXT ANIMATION */
+            var myString = "<let's            go     around            the          world/>";
+            var myArray = myString.split("");
+            var loopTimer;
+            function frameLooper() {
+                if(myArray.length > 0) {
+                    document.getElementById("myTypingText").innerHTML += myArray.shift();
+                } else {
+                    clearTimeout(loopTimer);
+                            return false;
+                }
+                loopTimer = setTimeout('frameLooper()',70);
+            }
+            $(document).ready(function(){
+                frameLooper();
+
+                $('#landingPage').hide();
+                $('#ryanZeng').hide();
+                $('#portfolioOption').hide();
+                $('#aboutOption').hide();
+                $('#resumeOption').hide();
+                $('#landingEarth').hide();
+                $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+                    $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
+                        $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
+                            $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
+                                $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+                                    setTimeout(function(){
+                                            $('.landingLine').addClass('grow').delay(1000).queue(function(){
+                                                $('#landingEarth').addClass('animated bounceIn').fadeIn('fast');
+                                            });
+                                    }, 100);
+                                });
+                            });
+                        });
+
+                    });
+
+                });
+                $('#ryanZeng').click(function(){
+                    landingSVG.drawsvg('animate').delay(3500).queue(function(){
+                            $('html, body').animate({
+                                scrollTop: $("#portfolioPage").offset().top
+                            }, 500);
+
+                    });
+
+                });
+            //                  Scrolling function
+                var $doc = $(document),
+                    $win = $(window),
+                    $svg = $('#landingLine').drawsvg(),
+                    max = 800;
+
+                $win.on('scroll', function() {
+                  var p = $win.scrollTop() / max;
+                  $svg.drawsvg('progress', p);
+                });
+            });
+
     </script>
 
 </body>

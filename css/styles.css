@@ -13,6 +13,10 @@
   src:url("../fonts/Stay Rad - Demo.ttf");
 }
 
+@font-face {
+  font-family: "Beauty";
+  src:url("../fonts/Beauty.ttf");
+}
 
 
 .body{
@@ -25,7 +29,7 @@
     margin:0 auto;
     position:absolute;
     height:2000px;
-    
+
 }
 #landingLine{
     z-index:101;
@@ -69,7 +73,7 @@
     height:4px;
     background-color:black;
     border-width:0px;
-    -webkit-transition: width 1s ease-out;  For Safari 3.1 to 6.0 
+    -webkit-transition: width 1s ease-out;  For Safari 3.1 to 6.0
     transition: width 1s  ease-out;
 }
 .hr-left{
@@ -233,28 +237,54 @@ nav.fill ul li a:hover:after {
 
 
 /*PORTFOLIO Page*/
+
 #portfolioPage {
-    background: linear-gradient(#d5d5d5,#86b4de);
-    text-align:center;
-    width: 100%;
-    height: 1500px;
-    overflow:hidden;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index:100;
+background-color:#d5cace;
+width: 100%;
+height: 100vh;
+overflow: hidden;
+background-position: center center;
+background-repeat: no-repeat;
+text-align:center;
+align-content: center;
+margin:auto;
+padding:0;
+background-size: cover;
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-size: cover;
 }
-#portfolioTitle{
-    font-family: 'Biryani', sans-serif;
-    font-weight:normal;
-    font-size:125px;
-    font-size:8vw;
-    margin-top:150px;
-    margin-bottom:0px;
-    text-align:center;
-    letter-spacing:40px;
-    letter-spacing:3vw;
-    transform:translateX(29px);
-    color:#333a56;
+
+.pBackground {
+  background-image: url("../images/pBackground.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-align:center;
+  margin:auto;
+  padding:0;
+  background-size: cover;
+  /* Create the parallax scrolling effect */
+
+}
+
+#portfolio{
+    height:400px;
+    z-index:200;
+    top: 60%;
+
+
+}
+#portfolioName {
+  /*left:23.5%;*/
+  /*top: 10%;*/
+    font-family: 'Beauty';
+    font-size: 123.66px;
+    z-index:200;
+    top: 30%;
+
 }
 
 /*ABOUT Page*/
