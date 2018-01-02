@@ -83,6 +83,26 @@
                   <a id='portfolioName' href ="#" class='button'>Portfolio</a>
               </h1>
             </div>
+            <div id="projContainer">
+                <div class="projects" id="proj1">
+                    <img class="arrowLeft" src="images/arrow-left.png">
+                    <img class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj1Picture" src="images/proj1_1.jpg">
+
+                </div>
+                <div class="projects" id="proj2">
+                    <img class="arrowLeft" src="images/arrow-left.png">
+                    <img class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj2Picture" src="images/proj2_1.jpg">
+
+                </div>
+                <div class="projects" id="proj3">
+                    <img class="arrowLeft" src="images/arrow-left.png">
+                    <img class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj3Picture" src="images/proj3_1.jpg">
+
+                </div>
+            </div>
           </div>
       </div>
     <!--Project End-->
@@ -123,8 +143,8 @@
                 loopTimer = setTimeout('frameLooper()',70);
             }
             $(document).ready(function(){
+                // Script for landing page
                 frameLooper();
-
                 $('#landingPage').hide();
                 $('#ryanZeng').hide();
                 $('#portfolioOption').hide();
@@ -157,7 +177,7 @@
                     });
 
                 });
-            //                  Scrolling function
+            //  Scrolling function for line
                 var $doc = $(document),
                     $win = $(window),
                     $svg = $('#landingLine').drawsvg(),

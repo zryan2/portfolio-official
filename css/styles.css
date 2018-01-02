@@ -221,7 +221,7 @@ nav.fill ul li a:hover:after {
 #portfolioPage {
 background-color:#d5cace;
 width: 100%;
-height: 100vh;
+height: 1000px;
 overflow: hidden;
 background-position: center center;
 background-repeat: no-repeat;
@@ -238,7 +238,7 @@ background-size: cover;
 .pBackground {
   background-image: url("../images/pBackground.jpg");
   width: 100%;
-  height: 100vh;
+  height: 140vh;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -253,15 +253,13 @@ background-size: cover;
 }
 
 .pContainer {
-  position: absolute;
   z-index: 100000;
   color: grey;
   width: 100%;
-  height: 100%;
+  height: 200px;
 }
 
 #portfolio{
-    height:400px;
     z-index:200;
     margin-top: 17%;
 }
@@ -271,8 +269,63 @@ background-size: cover;
     font-family: 'Beauty';
     font-size: 123.66px;
     z-index:200;
-    top: 30%;
 }
+#projContainer{
+    height:231px;
+    width: 130vh;
+    margin:0 auto;
+}
+#projContainer div{
+    height:231px;
+    width:231px;
+    float:left;
+    margin:0 auto;
+    margin-left:10vh;
+    margin-top:3vh;
+    
+}
+.projects{
+    height:231px;
+    width:231px;
+}
+.arrowLeft{
+    position:absolute;
+    z-index:102;
+    height:37px;
+    transform:translate(8px, 93px);
+}
+.arrowRight{
+    position:absolute;
+    z-index:102;
+    height:37px;
+    transform:translate(209px, 93px);
+}
+#proj1{
+
+}
+#proj1Picture{
+    height:231px;
+    width:231px;
+    z-index:101;
+}
+#proj2{
+}
+#proj2Picture{
+    height:231px;
+    width:231px;
+    z-index:101;
+
+}
+#proj3{
+}
+#proj3Picture{
+    height:231px;
+    width:231px;
+    z-index:101;
+
+}
+
+
 
 /*ABOUT Page*/
 #aboutPage {
