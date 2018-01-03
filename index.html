@@ -30,9 +30,10 @@
 
         <div id='landingPage'>
     <!--SVG Line Start-->
+<!--
     <div id='linePath'>
         <svg  id="landingLine" height="inherit" width="98vw">
-            <!--MX Y C x1 y1, x2 y2, x y-->
+            MX Y C x1 y1, x2 y2, x y
             <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round"
                   d="M 1065 260
                      C 1300 100, 1400 300, 1250 350
@@ -47,6 +48,7 @@
             });
         </script>
     </div>
+-->
     <!--SVG Line End-->
 <!--
             <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
@@ -85,21 +87,20 @@
             </div>
             <div id="projContainer">
                 <div class="projects" id="proj1">
-                    <img class="arrowLeft" src="images/arrow-left.png">
-                    <img class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj1Picture" src="images/proj1_1.jpg">
-
+                    <img id="proj1Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj1Right" class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj1Picture" src="images/proj1_0.jpg">
                 </div>
                 <div class="projects" id="proj2">
-                    <img class="arrowLeft" src="images/arrow-left.png">
-                    <img class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj2Picture" src="images/proj2_1.jpg">
+                    <img id="proj2Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj2Right" class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj2Picture" src="images/proj2_0.jpg">
 
                 </div>
                 <div class="projects" id="proj3">
-                    <img class="arrowLeft" src="images/arrow-left.png">
-                    <img class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj3Picture" src="images/proj3_1.jpg">
+                    <img id="proj3Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj3Right" class="arrowRight" src="images/arrow-right.png">
+                    <img id="proj3Picture" src="images/proj3_0.jpg">
 
                 </div>
             </div>
@@ -188,7 +189,96 @@
                   $svg.drawsvg('progress', p);
                 });
             });
+        // Script for Portfolio Page
+        // Project 1
+        $("#proj1Left").hide();
+        $("#proj1Right").hide();
+        $("#proj1").hover(function(){
+            $('#proj1Picture').fadeOut(100, function(){
+                $('#proj1Picture').fadeIn(400);
+                $("#proj1Left").fadeIn(400);
+                $("#proj1Right").fadeIn(400);
+                $('#proj1Picture').attr("src","images/proj1_1.jpg");
+            });
 
+        }, function(){
+            $("#proj1Left").fadeOut(400);
+            $("#proj1Right").fadeOut(400);
+            $('#proj1Picture').fadeOut(100, function(){
+                $('#proj1Picture').fadeIn(400);
+                $('#proj1Picture').attr("src","images/proj1_0.jpg");
+            });;
+        });
+        
+        // slideshow
+        $('#proj1Right').click(function(){
+            nextImage();
+        });
+
+        $('#proj1Left').click(function(){
+            prevImage();
+        });
+
+        var fileDirectory='images/proj1_';
+        var slideIndex=1;
+        var maxImages =  3;
+
+        function nextImage(){
+            if(slideIndex == maxImages){
+                slideIndex = 1;
+            }else{
+                slideIndex+=1;
+            }
+            $('#proj1Picture').attr('src',fileDirectory+slideIndex+".jpg");
+        }
+        function prevImage(){
+           if(slideIndex == 1){
+                slideIndex = maxImages;
+            }else{
+                slideIndex-=1;
+            }
+            $('#proj1Picture').attr('src',fileDirectory+slideIndex+".jpg");
+        }
+                    
+        
+        // Project 2
+        $("#proj2Left").hide();
+        $("#proj2Right").hide();
+        $("#proj2").hover(function(){
+            $('#proj2Picture').fadeOut(100, function(){
+                $('#proj2Picture').fadeIn(400);
+                $("#proj2Left").fadeIn(400);
+                $("#proj2Right").fadeIn(400);
+                $('#proj2Picture').attr("src","images/proj2_1.jpg");
+            });
+
+        }, function(){
+            $("#proj2Left").fadeOut(400);
+            $("#proj2Right").fadeOut(400);
+            $('#proj2Picture').fadeOut(100, function(){
+                $('#proj2Picture').fadeIn(400);
+                $('#proj2Picture').attr("src","images/proj2_0.jpg");
+            });;
+        });
+        // Project 3
+        $("#proj3Left").hide();
+        $("#proj3Right").hide();
+        $("#proj3").hover(function(){
+            $('#proj3Picture').fadeOut(100, function(){
+                $('#proj3Picture').fadeIn(400);
+                $("#proj3Left").fadeIn(400);
+                $("#proj3Right").fadeIn(400);
+                $('#proj3Picture').attr("src","images/proj3_1.jpg");
+            });
+
+        }, function(){
+            $("#proj3Left").fadeOut(400);
+            $("#proj3Right").fadeOut(400);
+            $('#proj3Picture').fadeOut(100, function(){
+                $('#proj3Picture').fadeIn(400);
+                $('#proj3Picture').attr("src","images/proj3_0.jpg");
+            });;
+        });
     </script>
 
 </body>

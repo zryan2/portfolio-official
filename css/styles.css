@@ -32,7 +32,7 @@
 
 }
 #landingLine{
-    z-index:101;
+    z-index:99;
 }
 
 
@@ -67,31 +67,6 @@
     font-family: 'Open Sans Condensed', sans-serif;
     height:40px;
 }
-/*
-.landingLine{
-    width:0px;
-    height:4px;
-    background-color:black;
-    border-width:0px;
-    -webkit-transition: width 1s ease-out;  For Safari 3.1 to 6.0
-    transition: width 1s  ease-out;
-}
-.hr-left{
-    float:left;
-}
-.hr-right{
-    float:right;
-}
-.grow{
-  width:100px;
-}
-
-#landingEarth{
-    height:30px;
-    float:left;
-    margin-left:10.5px;
-}
-*/
 
 #ryanZeng{
     height:400px;
@@ -274,6 +249,7 @@ background-size: cover;
     height:231px;
     width: 130vh;
     margin:0 auto;
+    z-index:102;
 }
 #projContainer div{
     height:231px;
@@ -282,6 +258,7 @@ background-size: cover;
     margin:0 auto;
     margin-left:10vh;
     margin-top:3vh;
+    z-index:102;
     
 }
 .projects{
@@ -293,22 +270,36 @@ background-size: cover;
     z-index:102;
     height:37px;
     transform:translate(8px, 93px);
+    cursor:pointer;
 }
 .arrowRight{
     position:absolute;
     z-index:102;
     height:37px;
     transform:translate(209px, 93px);
+    cursor:pointer;
 }
 #proj1{
+    background-color:#626262;
+    z-index:102;
 
 }
 #proj1Picture{
     height:231px;
     width:231px;
-    z-index:101;
+    z-index:102
+    z-index:102;
+
+}
+#proj1Picture_2{
+    height:231px;
+    width:231px;
+    z-index:102;
+
 }
 #proj2{
+    background-color:#626262;
+
 }
 #proj2Picture{
     height:231px;
@@ -317,6 +308,8 @@ background-size: cover;
 
 }
 #proj3{
+    background-color:#626262;
+
 }
 #proj3Picture{
     height:231px;
