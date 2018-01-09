@@ -84,7 +84,7 @@
 }
 
 #nameContainer{
-    height:25vh;
+    height:auto;
 /*    overflow:hidden;*/
 }
 
@@ -102,7 +102,8 @@
 }
 
 #optionContainer{
-    margin-top:20vh;
+    margin-left:50px;
+    margin-top:-20px;
 }
 li {
     font-family: "Antonio";
