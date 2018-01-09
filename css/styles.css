@@ -211,7 +211,7 @@ nav.fill ul li a:hover:after {
 
 #portfolioPage {
 background-color:#d5cace;
-height: 100vw;
+height: 150vh;
 
 /*overflow: hidden;*/
 background-position: center center;
@@ -230,7 +230,7 @@ background-size: cover;
   background-image: url("../images/pBackground.jpg");
   width: 100%;
 /*  height: 140vh;*/
-    height:100vw;
+    height:150vh;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -248,7 +248,7 @@ background-size: cover;
   z-index: 100000;
   color: grey;
   width: 100%;
-  height: 200px;
+  height: auto;
 }
 
 #portfolio{
@@ -259,7 +259,8 @@ background-size: cover;
   /*left:23.5%;*/
   /*top: 10%;*/
     font-family: 'Beauty';
-    font-size: 123.66px;
+    font-size: 15vh;
+
     z-index:200;
 }
 #projContainer{
