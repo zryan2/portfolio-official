@@ -53,34 +53,6 @@
     background-size: cover;
 }
 
-.containerText {
-    margin:0 auto;
-    margin-top:80px;
-
-}
-
-.containerText h1{
-    text-align: center;
-    font-size: 29px;
-/*      transform: translateY(-50%);*/
-    color: black;
-    font-family: 'Open Sans Condensed', sans-serif;
-    height:40px;
-}
-
-#ryanZeng{
-    height:400px;
-    z-index:200;
-}
-#landingName {
-  /*left:23.5%;*/
-  /*top: 10%;*/
-    font-family: 'Mellony';
-    font-size: 17vh;
-    z-index:200;
-
-}
-
 #landingPage{
     background-image: url("../images/myStory.jpg");
     width: 100%;
@@ -96,7 +68,42 @@
     background-attachment: fixed;
     background-size: cover;
 }
+.containerText {
+    margin:0 auto;
+    margin-top:80px;
 
+}
+
+.containerText h1{
+    text-align: center;
+    font-size: 29px;
+/*      transform: translateY(-50%);*/
+    color: black;
+    font-family: 'Open Sans Condensed', sans-serif;
+    height:40px;
+}
+
+#nameContainer{
+    height:25vh;
+/*    overflow:hidden;*/
+}
+
+#ryanZeng{
+/*    height:10vh;*/
+    z-index:200;
+}
+#landingName {
+  /*left:23.5%;*/
+  /*top: 10%;*/
+    font-family: 'Mellony';
+    font-size: 10vw;
+    z-index:200;
+
+}
+
+#optionContainer{
+    margin-top:20vh;
+}
 li {
     font-family: "Antonio";
 /*    font-size: 36px;*/
@@ -105,7 +112,7 @@ li {
     padding-right:14vh;
 /*    padding-right: 200px;*/
     text-transform: uppercase;
-    margin-top:50px;
+    margin-top:5vh;
     z-index:100;
 }
 
@@ -116,7 +123,7 @@ a {
 
 nav ul li a {
   padding: 15px;
-  z-index:100;
+  z-index:100;  
 
 }
 
@@ -132,9 +139,12 @@ nav ul li a {
 ul{
   overflow: hidden;
   list-style: none;
-  height: 110px;
+  height: 20vh;
   line-height: 0px;
-  transform: translate(0%,-180%);
+    margin:0 auto;
+/*    margin-top:-1vh;*/
+/*  transform: translate(0%,-20vh);*/
+/*  transform: translate(0%,-180%);*/
   z-index:100;
 }
 
@@ -185,6 +195,7 @@ nav.fill ul li a:hover:after {
   opacity: 1;
 }
 
+/*
 .myInfoBox {
   margin: 0px;
   padding: 0px;
@@ -192,6 +203,7 @@ nav.fill ul li a:hover:after {
   line-height: 0px;
   width: 700px;
 }
+*/
 
 /*PORTFOLIO Page*/
 
