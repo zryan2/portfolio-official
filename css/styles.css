@@ -195,9 +195,9 @@ nav.fill ul li a:hover:after {
 
 #portfolioPage {
 background-color:#d5cace;
-width: 100%;
-height: 1000px;
-overflow: hidden;
+height: 1200px;
+
+/*overflow: hidden;*/
 background-position: center center;
 background-repeat: no-repeat;
 text-align:center;
@@ -213,7 +213,8 @@ background-size: cover;
 .pBackground {
   background-image: url("../images/pBackground.jpg");
   width: 100%;
-  height: 140vh;
+/*  height: 140vh;*/
+    height:1200px;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
@@ -247,15 +248,14 @@ background-size: cover;
 }
 #projContainer{
     height:231px;
-    width: 130vh;
     margin:0 auto;
     z-index:102;
+    display:inline-block;
 }
 #projContainer div{
     height:231px;
     width:231px;
     float:left;
-    margin:0 auto;
     margin-left:10vh;
     margin-top:3vh;
     z-index:102;
@@ -282,7 +282,6 @@ background-size: cover;
 #proj1{
     background-color:#626262;
     z-index:102;
-
 }
 #proj1Picture{
     height:231px;
@@ -345,7 +344,7 @@ background-size: cover;
 /*ABOUT Page END*/
 
 
-#resume{
+#resumePage{
   background-image: url("images/beachOne.jpg");
   width: 100%;
   height: 100vh;
@@ -360,15 +359,16 @@ background-size: cover;
 }
 
 
-#resume h1 {
-    /*left:23.5%;*/
-    /*  top: 60px;*/
+#resume{
     font-family: 'Calligraffitti', cursive;
     font-weight:normal;
-    font-size: 350px;
-    line-height: 420px;
+    font-size: 20vw;
+    margin:0 auto;
+    margin-top:30vh;
 }
-
+#resumeContainer{
+    
+}
 /* Keyframes */
 @-webkit-keyframes fill {
   0% {
