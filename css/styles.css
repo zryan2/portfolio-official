@@ -76,7 +76,7 @@
   /*left:23.5%;*/
   /*top: 10%;*/
     font-family: 'Mellony';
-    font-size: 123.66px;
+    font-size: 17vh;
     z-index:200;
 
 }
@@ -99,9 +99,11 @@
 
 li {
     font-family: "Antonio";
-    font-size: 36px;
+/*    font-size: 36px;*/
+    font-size:5vh;
     display: inline-block;
-    padding-right: 200px;
+    padding-right:14vh;
+/*    padding-right: 200px;*/
     text-transform: uppercase;
     margin-top:50px;
     z-index:100;
@@ -132,7 +134,7 @@ ul{
   list-style: none;
   height: 110px;
   line-height: 0px;
-  transform: translate(5%,-180%);
+  transform: translate(0%,-180%);
   z-index:100;
 }
 
@@ -195,7 +197,7 @@ nav.fill ul li a:hover:after {
 
 #portfolioPage {
 background-color:#d5cace;
-height: 1200px;
+height: 100vw;
 
 /*overflow: hidden;*/
 background-position: center center;
@@ -214,7 +216,7 @@ background-size: cover;
   background-image: url("../images/pBackground.jpg");
   width: 100%;
 /*  height: 140vh;*/
-    height:1200px;
+    height:100vw;
   overflow: hidden;
   background-position: center center;
   background-repeat: no-repeat;
