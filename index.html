@@ -14,6 +14,8 @@
     <link href='https://fonts.googleapis.com/css?family=Biryani|Lato|Nunito|Open+Sans|Open+Sans+Condensed:300|Titillium+Web|Ubuntu|Vollkorn+SC' rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href="vendor/font-awesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
+
     <!-- include Google's AJAX API loader -->
     <script src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -25,14 +27,13 @@
 
 </head>
 <body style = "margin: 0;">
-
     <div class="background">
 
         <div id='landingPage'>
     <!--SVG Line Start-->
-<!--
     <div id='linePath'>
-        <svg  id="landingLine" height="inherit" width="98vw">
+<!--
+        <svg  id="landingLine">
             MX Y C x1 y1, x2 y2, x y
             <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round"
                   d="M 1065 260
@@ -42,13 +43,15 @@
                      C 900 460, 900 300, 600 450
                      C 350 600, 250 700, 300 1000" />
         </svg>
+-->
+<!--
         <script>
             var landingSVG = $('#landingLine').drawsvg({
                duration: 5000
             });
         </script>
-    </div>
 -->
+    </div>
     <!--SVG Line End-->
 <!--
             <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
@@ -92,18 +95,24 @@
                 <div class="projects" id="proj1">
                     <img id="proj1Left" class="arrowLeft" src="images/arrow-left.png">
                     <img id="proj1Right" class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj1Picture" src="images/proj1_0.jpg">
+                    <a href="https:/www.github.com/zryan2">
+                        <img id="proj1Picture" src="images/proj1_0.jpg">
+                    </a>
                 </div>
                 <div class="projects" id="proj2">
                     <img id="proj2Left" class="arrowLeft" src="images/arrow-left.png">
                     <img id="proj2Right" class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj2Picture" src="images/proj2_0.jpg">
+                    <a href="https:/www.github.com/zryan2">
+                        <img id="proj2Picture" src="images/proj2_0.jpg">
+                    </a>
 
                 </div>
                 <div class="projects" id="proj3">
                     <img id="proj3Left" class="arrowLeft" src="images/arrow-left.png">
                     <img id="proj3Right" class="arrowRight" src="images/arrow-right.png">
-                    <img id="proj3Picture" src="images/proj3_0.jpg">
+                    <a>
+                        <img id="proj3Picture" src="images/proj3_0.jpg">
+                    </a>
 
                 </div>
 
@@ -118,16 +127,41 @@
     <!--Project End-->
 
     <!--About Page-->
+<!--
       <div id="aboutPage">
           <h1 id='aboutTitle'>ABOUT</h1>
 
       </div>
+-->
     <!--About End-->
-      <div id="resumePage">
-              <h1 id = "resume" class = "">
-                <a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a>
-              </h1>
+
+    <!--Resume Page-->
+    <div id="resumePage">
+        <h1 id = "resume" class = "">
+            <a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a>
+        </h1>
       </div>
+    <!--Resume End-->
+
+    <!--Contact Page-->
+    <div id="contactPage">
+        <ul id="contactList">
+            <li>
+                <a href="mailto:zeng.ryan2@gmail.com">Email</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/zengryan8">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://www.github.com/zryan2">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com">Facebook</a>
+            </li>
+        </ul>
+        <p id="madeBy">Design and Code © Ryan Zeng 2018</p>
+    </div>
+    <!--Contact End-->
 
     <script>
             $('a.button').click( function(){
@@ -190,15 +224,15 @@
 
                 });
             //  Scrolling function for line
-                var $doc = $(document),
-                    $win = $(window),
-                    $svg = $('#landingLine').drawsvg(),
-                    max = 800;
-
-                $win.on('scroll', function() {
-                  var p = $win.scrollTop() / max;
-                  $svg.drawsvg('progress', p);
-                });
+//                var $doc = $(document),
+//                    $win = $(window),
+//                    $svg = $('#landingLine').drawsvg(),
+//                    max = 800;
+//
+//                $win.on('scroll', function() {
+//                  var p = $win.scrollTop() / max;
+//                  $svg.drawsvg('progress', p);
+//                });
             });
         // Script for Portfolio Page
         // Project 1
