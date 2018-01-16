@@ -337,7 +337,6 @@ background-size: cover;
 }
 
 
-
 /*ABOUT Page*/
 #aboutPage {
     overflow: hidden;
@@ -377,7 +376,7 @@ background-size: cover;
   animation: beachFrames 35s ease-in-out 0s infinite;
 }
 
-
+/* Resume Page*/
 #resume{
     font-family: 'Calligraffitti', cursive;
     font-weight:normal;
@@ -389,6 +388,7 @@ background-size: cover;
     
 }
 
+/* CONTACT Page*/
 #contactPage{
     height:100px;
     background-color:#2c3e50;
@@ -398,22 +398,28 @@ background-size: cover;
 #contactList{
     height:inherit;
     display:table;
-
+    width:auto;
+    padding-left: 0;
+    padding-right: 0;;
 }
 #contactList li{
-
+    width:25px;
+    margin-bottom: 0;
+    padding-left:40px;
+    padding-right:100px;
 }
 #contactList li a{
     font-size:20px;
     color:white;
-
 }
 #madeBy{
-    margin-top:0;
     background-color:#233140;
     color:white;
     padding-top: 20px;
     padding-bottom: 20px;
+    padding-left:0px;
+    padding-right:0px;
+    margin:0 auto;
 }
 
 

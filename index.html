@@ -11,11 +11,8 @@
 
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Biryani|Lato|Nunito|Open+Sans|Open+Sans+Condensed:300|Titillium+Web|Ubuntu|Vollkorn+SC' rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Calligraffitti|Nixie+One' rel="stylesheet">
     <link href="vendor/font-awesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
-
     <!-- include Google's AJAX API loader -->
     <script src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
@@ -72,8 +69,9 @@
                 <nav class = "fill">
                 <ul>
                     <li id='portfolioOption'><a href="#portfolioPage">Portfolio</a></li>
-                    <li id='aboutOption'><a href="#aboutPage">About</a></li>
+<!--                    <li id='aboutOption'><a href="#aboutPage">About</a></li>-->
                     <li id='resumeOption'><a href="#resumePage">Resume</a></li>
+                    <li id='contactOption'><a href="#contactPage">Contact</a></li>
                 </ul>
                 </nav>
             </div>
@@ -95,7 +93,7 @@
                 <div class="projects" id="proj1">
                     <img id="proj1Left" class="arrowLeft" src="images/arrow-left.png">
                     <img id="proj1Right" class="arrowRight" src="images/arrow-right.png">
-                    <a href="https:/www.github.com/zryan2">
+                    <a href="https://github.com/zryan2/Remedi2">
                         <img id="proj1Picture" src="images/proj1_0.jpg">
                     </a>
                 </div>
@@ -138,7 +136,7 @@
     <!--Resume Page-->
     <div id="resumePage">
         <h1 id = "resume" class = "">
-            <a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a>
+            <a href ="https://drive.google.com/file/d/1N7WxzpyO57VhUicCQubiOyWJRMFZK-bi/view" class='button'>Resume</a>
         </h1>
       </div>
     <!--Resume End-->
@@ -156,10 +154,10 @@
                 <a href="https://www.github.com/zryan2">GitHub</a>
             </li>
             <li>
-                <a href="https://www.facebook.com">Facebook</a>
+                <a href="https://www.facebook.com/ryan.zeng.7">Facebook</a>
             </li>
         </ul>
-        <p id="madeBy">Copyright © Ryan Zeng 2018</p>
+        <p id="madeBy">Copyright © Website Template Created by Ryan Zeng & Harsh Patel 2018</p>
     </div>
     <!--Contact End-->
 
@@ -191,22 +189,38 @@
             $(document).ready(function(){
                 // Script for landing page
                 frameLooper();
+//                $('#landingPage').hide();
+//                $('#ryanZeng').hide();
+//                $('#portfolioOption').hide();
+//                $('#aboutOption').hide();
+//                $('#resumeOption').hide();
+//                $('#landingEarth').hide();
+//                $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+//                    $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
+//                        $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
+//                            $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
+//                                $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+//                                    setTimeout(function(){
+//                                    }, 100);
+//                                });
+//                            });
+//                        });
+//
+//                    });
+//
+//                });
                 $('#landingPage').hide();
                 $('#ryanZeng').hide();
                 $('#portfolioOption').hide();
-                $('#aboutOption').hide();
                 $('#resumeOption').hide();
+                $('#contactOption').hide();
                 $('#landingEarth').hide();
-                $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+                 $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
                     $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
                         $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
-                            $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
-                                $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
-                                    setTimeout(function(){
-                                            $('.landingLine').addClass('grow').delay(1000).queue(function(){
-                                                $('#landingEarth').addClass('animated bounceIn').fadeIn('fast');
-                                            });
-                                    }, 100);
+                            $('#resumeOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
+                                $('#contactOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+                                    setTimeout();
                                 });
                             });
                         });
