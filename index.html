@@ -5,302 +5,401 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Ryan Zeng</title>
+    <title>Harsh D. Patel</title>
     <meta name="description" content="" />
     <meta property="og:image" content="" />
 
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link href='https://fonts.googleapis.com/css?family=Biryani|Lato|Nunito|Open+Sans|Open+Sans+Condensed:300|Titillium+Web|Ubuntu|Vollkorn+SC' rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Nixie+One" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Calligraffitti|Nixie+One|Damion' rel="stylesheet">
+    <link href="vendor/font-awesome/css/fontawesome.min.css" rel="stylesheet" type="text/css">
     <!-- include Google's AJAX API loader -->
     <script src="http://www.google.com/jsapi"></script>
     <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
     <script type='text/javascript' src='js/jquery-hoverIntent-master/jquery.hoverIntent.js'></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="js/jquery.drawsvg.js"></script>
     <script type="text/javascript">google.load("jqueryui", "1.5.2");</script>
 
 
 </head>
-  <body style = "margin: 0;">
+<body style = "margin: 0;">
     <div class="background">
-      <h1 id = "ryanZeng" class = "animated swing"><a href ="#" class='button'>Ryan Zeng</a></h1>
-      <nav class = "fill">
-        <ul>
-          <li><a href="#portfolioPage">Portfolio</a></li>
-          <li><a href="#aboutPage">About</a></li>
-          <li><a href="#resumePage">Resume</a></li>
-        </ul>
-      </nav>
-      <div class="myInfoBox">
-          <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
-      </div>
+
+        <div id='landingPage'>
+    <!--SVG Line Start-->
+    <div id='linePath'>
+<!--
+        <svg  id="landingLine">
+            MX Y C x1 y1, x2 y2, x y
+            <path fill="none" stroke-width="6" stroke="white" stroke-linecap="round"
+                  d="M 1065 260
+                     C 1300 100, 1400 300, 1250 350
+                     C 1000 420, 1150 50, 1300 400
+                     C 1380 600, 1200 550, 1100 525
+                     C 900 460, 900 300, 600 450
+                     C 350 600, 250 700, 300 1000" />
+        </svg>
+-->
+<!--
+        <script>
+            var landingSVG = $('#landingLine').drawsvg({
+               duration: 5000
+            });
+        </script>
+-->
     </div>
-      <script>
+    <!--SVG Line End-->
+<!--
+            <div style='height:100px; width:250px; margin: 0 auto; margin-top:20px;'>
+                <hr class='landingLine hr-left'>
+                <img id='landingEarth' src='images/earth-temp.png'>
+                <hr class='landingLine hr-right'>
+            </div>
+-->
+            <div class="containerText">
+                <h1 id= "myTypingText"></h1>
+            </div>
+            <div id="nameContainer">
+                <h1 id = "ryanZeng">
+                    <a id='landingName' href ="#" class='button'>Harsh Patel</a>
+                </h1>
+            </div>
+            <div id="optionContainer">
+                <nav class = "fill">
+                <ul>
+                    <li id='portfolioOption'><a href="#portfolioPage">Portfolio</a></li>
+<!--                    <li id='aboutOption'><a href="#aboutPage">About</a></li>-->
+                    <li id='resumeOption'><a href="#resumePage">Resume</a></li>
+                    <li id='contactOption'><a href="#contactPage">Contact</a></li>
+                </ul>
+                </nav>
+            </div>
+<!--            <div class="myInfoBox">-->
+              <!-- <h1 id = "myInfo"> I'm an entrerepneur, technologist, and business person who inspires to take the path less traveled. </h1> -->
+<!--            </div>-->
+        </div>
+      </div>
+
+    <!--Portfolio Page-->
+      <div id='portfolioPage'>
+          <div class="pBackground">
+            <div class="pContainer">
+              <h1 id = "portfolio">
+                  <a id='portfolioName' href ="#" class='button'>Portfolio</a>
+              </h1>
+            </div>
+            <div id="projContainer">
+                <div class="projects" id="proj1">
+                    <img id="proj1Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj1Right" class="arrowRight" src="images/arrow-right.png">
+                    <a href="https://github.com/zryan2/Remedi2">
+                        <img id="proj1Picture" src="images/proj1_0.jpg">
+                    </a>
+                </div>
+                <div class="projects" id="proj2">
+                    <img id="proj2Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj2Right" class="arrowRight" src="images/arrow-right.png">
+                    <a href="https://drive.google.com/open?id=0B6-qxD2O789MaGo4LUFJQ2c2bzg">
+                        <img id="proj2Picture" src="images/proj2_0.jpg">
+                    </a>
+
+                </div>
+                <div class="projects" id="proj3">
+                    <img id="proj3Left" class="arrowLeft" src="images/arrow-left.png">
+                    <img id="proj3Right" class="arrowRight" src="images/arrow-right.png">
+                    <a href="https://drive.google.com/open?id=0B6-qxD2O789MaGo4LUFJQ2c2bzg">
+                        <img id="proj3Picture" src="images/proj3_0.jpg">
+                    </a>
+
+                </div>
+
+            </div>
+                <div>
+                    <h2>
+                        <a href ="https://github.com/harshpatel17" class='button'  style="font-family: 'beauty'; color:white; padding-bottom:150px; font-size:50px; ">View more projects</a>
+                    </h2>
+                </div>
+          </div>
+      </div>
+    <!--Project End-->
+
+    <!--About Page-->
+<!--
+      <div id="aboutPage">
+          <h1 id='aboutTitle'>ABOUT</h1>
+
+      </div>
+-->
+    <!--About End-->
+
+    <!--Resume Page-->
+    <div id="resumePage">
+        <h1 id = "resume" class = "">
+            <a href ="https://drive.google.com/open?id=1OVmybK29yibdoDy3r7RPVfugBc5pXBxZ" class='button'>Resume</a>
+        </h1>
+      </div>
+    <!--Resume End-->
+
+    <!--Contact Page-->
+    <div id="contactPage">
+        <ul id="contactList">
+            <li>
+                <a href="mailto:harshpatel7.list@gmail.com">Email</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/harshdpatel7/">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/harshpatel17">GitHub</a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/profile.php?id=100007884427819&ref=bookmarks">Facebook</a>
+            </li>
+        </ul>
+        <p id="madeBy">Copyright © Website Template Created by Ryan Zeng & Harsh Patel 2018</p>
+    </div>
+    <!--Contact End-->
+
+    <script>
+            $('a.button').click( function(){
+              // $('input[name=firstName]').addClass('animated rubberBand');
+              $("#ryanZeng").removeClass('swing').addClass('rubberBand')
+            });
+
             $('a').click(function(){
                 $('html, body').animate({
                     scrollTop: $( $(this).attr('href') ).offset().top
                 }, 500);
                 return false;
             });
-      </script>
-  </body>
-<!--Portfolio Page-->
-  <div id="portfolioPage">
-      <div id="middle_portfolio">
-        <h3 id='portfolioTitle'>PORTFOLIO</h3>
-        
-<!-- PROJECT 1 (Begin) -->
-            <div class='projectDivs' id='project_1'>
-                <!--Slideshow Optional-->
-                <div class="projectTop" id="proj1Top">
-                    <img class='slideshowArrow' id='proj1Left' src='images/arrow-left-off.png'>
-                    <img class='slideshowArrow' id='proj1Right' src='images/arrow-right-off.png'>
-                    <div id=proj1Slideshow>
-                        <img class='proj1Slides' id='proj1slideDisplay' src="images/remedi-1.png" style="width:250px;">
-                        <img>
-                        <img>
-                    </div>
-                    <script>
-
-                        $('#proj1Left').hover(function(){
-                        $(this).attr('src','images/arrow-left-on.png');
-                        },function(){
-                        $(this).attr('src','images/arrow-left-off.png');
-                        });
-                        
-                        $('#proj1Right').hover(function(){
-                        $(this).attr('src','images/arrow-right-on.png');
-                        },function(){
-                        $(this).attr('src','images/arrow-right-off.png');
-                        });
-                        
-
-                        $('#proj1Right').click(function(){
-                            nextImage();
-                        });
-                        
-                        $('#proj1Left').click(function(){
-                            prevImage();
-                        });
-                        
-                        var fileDirectory='images/remedi-';
-                        var slideIndex=1;
-                        var maxImages =  $('#proj1Slideshow img').length;
-                        
-                        function nextImage(){
-                            if(slideIndex == maxImages){
-                                slideIndex = 1;
-                            }else{
-                                slideIndex+=1;
-                            }
-                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");
-                        }
-                        function prevImage(){
-                           if(slideIndex == 1){
-                                slideIndex = maxImages;
-                            }else{
-                                slideIndex-=1;
-                            }
-                            $('#proj1slideDisplay').attr('src',fileDirectory+slideIndex+".png");                            
-                        }
-                    </script>
-                </div>
-                <!--End slideshow-->
-                <div id='proj1Info'>
-                    <p1 id='proj1Title' class="projectTitle">REMEDI</p1>
-                    <img src="images/arrow-up-on.png" class="arrowUp" id="proj1Up">
-                </div>
-                <script>
-                    $("#proj1Info").hoverIntent(function(){
-                        $("#proj1Top").slideUp(311.5);
-                        $("#proj1Up").attr("src","images/arrow-down-on.png");
-                        $("#proj1Info").animate({
-                           height: "+=350"
-                        }, 310);
-                        if($("#project1Description").length < 1){
-                            $("#proj1Info").append("<div class='projDescript' id='project1Description'> These words are just a test to test the description line and stuff</div>");
-                        }
-                        $("#proj1Left").fadeOut(50);
-                        $("#proj1Right").fadeOut(50);
-                    },function(){
-                        $("#proj1Top").slideDown(310);
-                        $("#proj1Info").animate({
-                           height: "-=350"
-                        }, 310);
-                        $("#proj1Up").attr("src","images/arrow-up-on.png");
-                        if($("#project1Description").length == 1){
-                            $("#project1Description").fadeOut(250, function(){
-                                $(this).remove();
+            /* TEXT ANIMATION */
+            var myString = "<let's            go     around            the          world/>";
+            var myArray = myString.split("");
+            var loopTimer;
+            function frameLooper() {
+                if(myArray.length > 0) {
+                    document.getElementById("myTypingText").innerHTML += myArray.shift();
+                } else {
+                    clearTimeout(loopTimer);
+                            return false;
+                }
+                loopTimer = setTimeout('frameLooper()',70);
+            }
+            $(document).ready(function(){
+                // Script for landing page
+                frameLooper();
+//                $('#landingPage').hide();
+//                $('#ryanZeng').hide();
+//                $('#portfolioOption').hide();
+//                $('#aboutOption').hide();
+//                $('#resumeOption').hide();
+//                $('#landingEarth').hide();
+//                $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+//                    $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
+//                        $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
+//                            $('#aboutOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
+//                                $('#resumeOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+//                                    setTimeout(function(){
+//                                    }, 100);
+//                                });
+//                            });
+//                        });
+//
+//                    });
+//
+//                });
+                $('#landingPage').hide();
+                $('#ryanZeng').hide();
+                $('#portfolioOption').hide();
+                $('#resumeOption').hide();
+                $('#contactOption').hide();
+                $('#landingEarth').hide();
+                 $('#landingPage').addClass('animated bounceInDown').fadeIn('fast').delay(1100).queue(function(){
+                    $('#ryanZeng').addClass('animated bounceIn').fadeIn('fast').delay(1100).queue(function(){
+                        $('#portfolioOption').addClass('animated bounceInLeft').fadeIn(2).delay(3).queue(function(){
+                            $('#resumeOption').addClass('animated bounceInDown').fadeIn(2).delay(200).queue(function(){
+                                $('#contactOption').addClass('animated bounceInRight').fadeIn('fast').delay(750).queue(function(){
+                                    setTimeout();
+                                });
                             });
-                        }
-                        $("#proj1Left").fadeIn(600);
-                        $("#proj1Right").fadeIn(600);
-                    });
-
-                </script>
-
-                <div class="projectBottom">
-
-                    <div class='descriptionLine'></div>
-                    <div id="proj1TagDiv">
-                        <p1 class=tagText>Java | Android | Hackathon</p1>
-                    </div>
-                    <div class='logoContainer' style="transform:translate(275px, -8px);">
-                        <a href='https://github.com/zryan2/Remedi2'>
-                            <img src="images/github-logo.png" style="height:30px;">
-                        </a>
-                        <a href='https://devpost.com/software/remedi-q82k7u'>
-                            <img src="images/devpost-logo.svg" style='height:30px'>
-                        </a>
-                    </div>
-                </div>
-            </div>
-<!-- PROJECT 1 (End)-->
-<!-- PROJECT 2 (Begin)-->
-            <div class='projectDivs' id='project_2'>
-                <div class="projectTop" id="proj2Top">
-                    <img src="images/meme-age_logo.png" style="width:350px;">
-                </div>
-                <div id='proj2Info'>
-                    <p1 class="projectTitle">MEME-AGE</p1>
-                    <img src="images/arrow-up-on.png" class="arrowUp" id="proj2Up">
-                </div>
-                <script>
-                    $("#proj2Info").hoverIntent(function(){
-                        $("#proj2Top").slideUp(311.5);
-                        $("#proj2Up").attr("src","images/arrow-down-on.png");
-                           $("#proj2Info").animate({
-                               height: "+=350"
-                           }, 310);
-                            if($("#project2Description").length < 1){
-                                $("#proj2Info").append("<div class='projDescript' id='project2Description'> These words are just a test to test the description line and stuff</div>");
-                            }
-                    },function(){
-                        $("#proj2Top").slideDown(310);
-                        $("#proj2Info").animate({
-                           height: "-=350"
-                        }, 310);
-                        $("#proj2Up").attr("src","images/arrow-up-on.png");
-                        if($("#project2Description").length == 1){
-                            $("#project2Description").fadeOut(250, function(){
-                                $(this).remove();
-                            });
-                        }
+                        });
 
                     });
 
-                </script>
+                });
+                $('#ryanZeng').click(function(){
+                    landingSVG.drawsvg('animate').delay(3500).queue(function(){
+                            $('html, body').animate({
+                                scrollTop: $("#portfolioPage").offset().top
+                            }, 500);
 
-                <div class="projectBottom">
+                    });
 
-                    <div class='descriptionLine'></div>
-                    <div id="proj2TagDiv">
-                        <p1 class=tagText>JavaScript | Chrome | HTML/CSS | Hackathon</p1>
-                    </div>
-                    <div class='logoContainer' style="transform:translate(275px, -8px);">
-                        <a href='https://github.com/zryan2/VandyHacks2017'>
-                            <img src="images/github-logo.png" style="height:30px" >
-                        </a>
-                        <a href='https://devpost.com/software/meme-age'>
-                            <img src="images/devpost-logo.svg" style='height:30px'>
-                        </a>
+                });
+            //  Scrolling function for line
+//                var $doc = $(document),
+//                    $win = $(window),
+//                    $svg = $('#landingLine').drawsvg(),
+//                    max = 800;
+//
+//                $win.on('scroll', function() {
+//                  var p = $win.scrollTop() / max;
+//                  $svg.drawsvg('progress', p);
+//                });
+            });
+        // Script for Portfolio Page
+        // Project 1
+        $("#proj1Left").hide();
+        $("#proj1Right").hide();
+        $("#proj1").hover(function(){
+            $('#proj1Picture').fadeOut(100, function(){
+                $('#proj1Picture').fadeIn(400);
+                $("#proj1Left").fadeIn(400);
+                $("#proj1Right").fadeIn(400);
+                $('#proj1Picture').attr("src","images/proj1_1.jpg");
+            });
 
-                    </div>
-                </div>
-          </div>
-<!-- PROJECT 2 (End) -->
-          
-<!-- PROJECT 3 (Begin) -->
-          
-          
-<!-- PROJECT 3 (End) -->
-          
-      </div>          
-  </div>
-<!--Project End-->
-    
-<!--About Page-->
-  <div id="aboutPage">
-      <h1 id='aboutTitle'>ABOUT</h1>
-      <!--Div to hold headshot & Quote-->
-      <div id='aboutHeadshot'>
-        <div id='aboutImageDiv'>
-            <img src="images/groot_serious.jpg" id="headshotImage">
-        </div>
-        <div id='quoteDiv'>
-            <p1 class='aboutFont' style='font-size:20px;'>"The best preparation for tomorrow is doing your best today."</p1>
-            <br>
-            <p1 class='aboutFont' style='font-size:20px;'>-H. Jackson Brown, Jr.</p1> 
-        </div>
-      </div>
-      
-      <script>
-        $('#headshotImage').hover(function(){
-            $(this).attr('src','images/groot_funny.jpg');
-        },function(){
-            $(this).attr('src','images/groot_serious.jpg');
+        }, function(){
+            $("#proj1Left").fadeOut(400);
+            $("#proj1Right").fadeOut(400);
+            $('#proj1Picture').fadeOut(100, function(){
+                $('#proj1Picture').fadeIn(400);
+                $('#proj1Picture').attr("src","images/proj1_0.jpg");
+            });;
         });
-      </script>
-      
-      <div id="aboutBody">
-          <p1 class='aboutFont' style="color:#00ddd8; font-size:70px">Hello!</p1>
-          <br>
-          <p1 class='aboutFont'>My name is </p1>
-          <p1 class='aboutFont' style='color:#517398'>Ryan</p1>
-          <p1 class='aboutFont'>!</p1>
-          <br>
-          <p1 class='aboutFont'>I am a 3rd year undergraduate at the</p1>
-          <p1 class='aboutFont' style='color:orange'>University of Florida</p1>
-          <p1 class='aboutFont'>. I am pursuing a </p1>
-          <p1 class='aboutFont' style='color:#517398'>B.S. in Computer Science</p1>
-          <p1 class='aboutFont'> and a minor in</p1>
-          <p1 class='aboutFont' style='color:#517398'> Digital Arts and Sciences</p1>
-          <p1 class='aboutFont'>.</p1>
-          <br>
-          <br>
-          <p1 class='aboutFont'>My reason for becoming a Computer Scientist is to help people through technology and provide an easier life.</p1>
-          <br>
-          <br>
-          <p1 class='aboutFont'>I enjoy building mobile applications for android platform. My technical expertise includes various programming languages (Java, C++, Python) and libraries.</p1>
-          <br>
-          <br>
-          <p1 class='aboutFont'>In my freetime I like weightlifting, videogames, boardgames, and challenging myself with puzzles.</p1>
-<!--
-          <br>
-          <br>
-          <p1 class='aboutFont'>Previously I have interned at:</p1>
-          <br>
-          <p1 class='aboutFont'>Microsoft</p1>
-          <br>
-          <p1 class='aboutFont'>Google</p1>
-          <br>
--->
 
-      </div>
-      <div id='contactDiv'>
-          <p1 class='contactFont'>I can be contacted through:</p1>
-          <br>
-          <img src="images/email_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='mailto:zeng.ryan2@gmail.com'>Email</a>
-          <br>
-          <img src="images/linkedin_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='https://www.linkedin.com/in/zengryan8'>LinkedIn</a>
-          <br>
-          <img src="images/fb_logo.png" class='contactLogo'>
-          <a class='contactFont contactLink' href='https://www.facebook.com/ryan.zeng.7'>Facebook</a>
-      </div>
-  </div>
-<!--About End-->
-  <div id="resumePage">
-      <h1 id = "resume" class = ""><a href ="file:///Users/harsh/Downloads/Resume%207.pdf" class='button'>Resume</a></h1>
-  </div>
-
-<script>
-        $('a.button').click( function(){
-          // $('input[name=firstName]').addClass('animated rubberBand');
-          $("#ryanZeng").removeClass('swing').addClass('rubberBand')
+        // slideshow
+        $('#proj1Right').click(function(){
+            nextImage_1();
         });
-</script>
 
+        $('#proj1Left').click(function(){
+            prevImage_1();
+        });
+
+        var fileDirectory_1 ='images/proj1_';
+        var slideIndex_1=1;
+        var maxImages_1 =  3;
+
+        function nextImage_1(){
+            if(slideIndex_1 == maxImages_1){
+                slideIndex_1 = 1;
+            }else{
+                slideIndex_1+=1;
+            }
+            $('#proj1Picture').attr('src',fileDirectory_1+slideIndex_1+".jpg");
+        }
+        function prevImage_1(){
+           if(slideIndex_1 == 1){
+                slideIndex_1 = maxImages_1;
+            }else{
+                slideIndex_1-=1;
+            }
+            $('#proj1Picture').attr('src',fileDirectory_1+slideIndex_1+".jpg");
+        }
+
+
+        // Project 2
+        $("#proj2Left").hide();
+        $("#proj2Right").hide();
+        $("#proj2").hover(function(){
+            $('#proj2Picture').fadeOut(100, function(){
+                $('#proj2Picture').fadeIn(400);
+                $("#proj2Left").fadeIn(400);
+                $("#proj2Right").fadeIn(400);
+                $('#proj2Picture').attr("src","images/proj2_1.jpg");
+            });
+
+        }, function(){
+            $("#proj2Left").fadeOut(400);
+            $("#proj2Right").fadeOut(400);
+            $('#proj2Picture').fadeOut(100, function(){
+                $('#proj2Picture').fadeIn(400);
+                $('#proj2Picture').attr("src","images/proj2_0.jpg");
+            });;
+        });
+
+        // slideshow
+        $('#proj2Right').click(function(){
+            nextImage_2();
+        });
+
+        $('#proj2Left').click(function(){
+            prevImage_2();
+        });
+
+        var fileDirectory_2='images/proj2_';
+        var slideIndex_2=1;
+        var maxImages_2 =  1;
+
+        function nextImage_2(){
+            if(slideIndex_2 == maxImages_2){
+                slideIndex_2 = 1;
+            }else{
+                slideIndex_2+=1;
+            }
+            $('#proj2Picture').attr('src',fileDirectory_2+slideIndex_2+".jpg");
+        }
+        function prevImage_2(){
+           if(slideIndex_2 == 1){
+                slideIndex_2 = maxImages_2;
+            }else{
+                slideIndex_2-=1;
+            }
+            $('#proj2Picture').attr('src',fileDirectory_2+slideIndex_2s+".jpg");
+        }
+        // Project 3
+        $("#proj3Left").hide();
+        $("#proj3Right").hide();
+        $("#proj3").hover(function(){
+            $('#proj3Picture').fadeOut(100, function(){
+                $('#proj3Picture').fadeIn(400);
+                $("#proj3Left").fadeIn(400);
+                $("#proj3Right").fadeIn(400);
+                $('#proj3Picture').attr("src","images/proj3_1.jpg");
+            });
+
+        }, function(){
+            $("#proj3Left").fadeOut(400);
+            $("#proj3Right").fadeOut(400);
+            $('#proj3Picture').fadeOut(100, function(){
+                $('#proj3Picture').fadeIn(400);
+                $('#proj3Picture').attr("src","images/proj3_0.jpg");
+            });;
+        });
+
+        // slideshow
+        $('#proj3Right').click(function(){
+            nextImage_3();
+        });
+
+        $('#proj3Left').click(function(){
+            prevImage_3();
+        });
+
+        var fileDirectory_3='images/proj3_';
+        var slideIndex_3=1;
+        var maxImages_3 =  4;
+
+        function nextImage_3(){
+            if(slideIndex_3 == maxImages_3){
+                slideIndex_3 = 1;
+            }else{
+                slideIndex_3+=1;
+            }
+            $('#proj3Picture').attr('src',fileDirectory_3+slideIndex_3+".jpg");
+        }
+        function prevImage_3(){
+           if(slideIndex_3== 1){
+                slideIndex_3= maxImages_3;
+            }else{
+                slideIndex_3-=1;
+            }
+            $('#proj3Picture').attr('src',fileDirectory_3+slideIndex_3+".jpg");
+        }
+    </script>
+
+</body>
 
 </html>
